@@ -1,0 +1,24 @@
+{
+  "experiment": "clinical association simulation sample-size sensitivity",
+  "n_subjects": 2000,
+  "n_runs_per_missingness_level": 100,
+  "missingness_levels": [
+    0.2,
+    0.4,
+    0.6
+  ],
+  "scenario": "baseline_harder",
+  "seed_start": 1200000,
+  "brits_mi_imputations": 50,
+  "mice": "R mice package defaults with m=50 and maxit=5",
+  "missforest": "Five independently seeded R missForest package-default completions with downstream refitting and Rubin pooling",
+  "predictor_preselection": "none for package-default MICE or Missforest",
+  "methods": [
+    "BRITS-MI",
+    "MICE",
+    "Missforest",
+    "Mean imputation",
+    "Complete case",
+    "Full data"
+  ]
+}

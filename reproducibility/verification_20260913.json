@@ -1,0 +1,101 @@
+{
+  "release": "0.3.0",
+  "date": "2026-09-13",
+  "checks": [
+    {
+      "check": "source_tests",
+      "exit_code": 0,
+      "stdout": "............                                                             [100%]\n12 passed in 2.83s\n",
+      "stderr": ""
+    },
+    {
+      "check": "lint",
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "check": "install_wheel",
+      "exit_code": 0,
+      "stdout": "Processing ./.tmp/jbi_image_revision_20260913/dist/brits_mi-0.3.0-py3-none-any.whl\nInstalling collected packages: brits-mi\nSuccessfully installed brits-mi-0.3.0\n",
+      "stderr": "\n[notice] A new release of pip is available: 25.2 -> 26.2.1\n[notice] To update, run: <workspace>/.venv/bin/python -m pip install --upgrade pip\n"
+    },
+    {
+      "check": "installed_wheel_tests",
+      "exit_code": 0,
+      "stdout": "............                                                             [100%]\n12 passed in 2.09s\n",
+      "stderr": ""
+    },
+    {
+      "check": "installed_import_path_and_versions",
+      "exit_code": 0,
+      "stdout": "{\n  \"python\": \"3.14.0 (main, Oct  7 2025, 09:34:52) [Clang 17.0.0 (clang-1700.0.13.3)]\",\n  \"brits_mi_path\": \"<workspace>/.tmp/jbi_image_revision_20260913/wheel_install/brits_mi/__init__.py\",\n  \"generator_path\": \"<workspace>/.tmp/jbi_image_revision_20260913/wheel_install/longitudinal_sim/__init__.py\",\n  \"versions\": {\n    \"brits-mi\": \"0.3.0\",\n    \"torch\": \"2.11.0\",\n    \"numpy\": \"2.4.4\",\n    \"pandas\": \"3.0.2\",\n    \"scikit-learn\": \"1.8.0\",\n    \"statsmodels\": \"0.14.6\",\n    \"scipy\": \"1.17.1\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "clinical_cli_help",
+      "exit_code": 0,
+      "stdout": "usage: python -m brits_mi.cli [-h] --output OUTPUT [--runs RUNS]\n                              [--subjects SUBJECTS]\n                              [--missing-rates MISSING_RATES [MISSING_RATES ...]]\n                              [--scenario {baseline_harder,baseline_irregular,mild_harder,strong_harder,strong_irregular}]\n                              [--imputations IMPUTATIONS] [--epochs EPOCHS]\n                              [--hidden-size HIDDEN_SIZE]\n                              [--batch-size BATCH_SIZE]\n                              [--variance-factor VARIANCE_FACTOR]\n                              [--first-seed FIRST_SEED] [--device DEVICE]\n\nCommand-line interface for the packaged clinical-association simulation.\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT       directory for tidy CSV results\n  --runs RUNS\n  --subjects SUBJECTS\n  --missing-rates MISSING_RATES [MISSING_RATES ...]\n  --scenario {baseline_harder,baseline_irregular,mild_harder,strong_harder,strong_irregular}\n  --imputations IMPUTATIONS\n  --epochs EPOCHS\n  --hidden-size HIDDEN_SIZE\n  --batch-size BATCH_SIZE\n  --variance-factor VARIANCE_FACTOR\n  --first-seed FIRST_SEED\n  --device DEVICE\n",
+      "stderr": ""
+    },
+    {
+      "check": "image_cli_help",
+      "exit_code": 0,
+      "stdout": "usage: python -m brits_mi.image_fusion [-h] --output OUTPUT\n                                       [--n-subjects N_SUBJECTS]\n                                       [--n-runs N_RUNS] [--seed SEED]\n                                       [--missing-rate MISSING_RATE]\n                                       --prototype-alpha PROTOTYPE_ALPHA\n                                       [--trees TREES]\n\nBRITS-MI-image tree extension and feature-level fusion. This explicit\nfit/transform API packages the image-conditioning concept. It is not a\nrecurrent BRITS engine and does not implement stochastic MI. It is a new,\ntestable API, not a claim to recover an unrecorded historical tuning\ninvocation.\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT\n  --n-subjects N_SUBJECTS\n  --n-runs N_RUNS\n  --seed SEED\n  --missing-rate MISSING_RATE\n  --prototype-alpha PROTOTYPE_ALPHA\n                        Must be explicit: historical alpha was not archived\n  --trees TREES\n",
+      "stderr": ""
+    },
+    {
+      "check": "reported_clinical_launcher_help",
+      "exit_code": 0,
+      "stdout": "usage: run_reported_clinical.py [-h] --n {500,2000} --runs RUNS\n                                --missing-rate {0.2,0.4,0.6}\n                                --mean-weight MEAN_WEIGHT\n                                [--seed-start SEED_START] --output OUTPUT\n                                [--execute]\n\nPortable launcher for the reported recurrent-plus-forest clinical method.\n\noptions:\n  -h, --help            show this help message and exit\n  --n {500,2000}\n  --runs RUNS\n  --missing-rate {0.2,0.4,0.6}\n  --mean-weight MEAN_WEIGHT\n                        Specify the archived configuration; do not infer a\n                        tuning setting\n  --seed-start SEED_START\n  --output OUTPUT\n  --execute             Otherwise print the command only\n",
+      "stderr": ""
+    },
+    {
+      "check": "reported_mnar_launcher_help",
+      "exit_code": 0,
+      "stdout": "usage: run_clinical_association_mnar_sensitivity.py [-h] --outdir OUTDIR\n                                                    [--n N] [--nsim NSIM]\n                                                    [--m M]\n                                                    [--missforest-draws MISSFOREST_DRAWS]\n                                                    [--target-missing TARGET_MISSING]\n                                                    [--mnar-strengths MNAR_STRENGTHS [MNAR_STRENGTHS ...]]\n                                                    [--seed-start SEED_START]\n                                                    [--mean-weight MEAN_WEIGHT]\n                                                    [--noise-weight NOISE_WEIGHT]\n                                                    [--max-epochs MAX_EPOCHS]\n                                                    [--n-workers N_WORKERS]\n                                                    [--resume | --no-resume]\n\noptions:\n  -h, --help            show this help message and exit\n  --outdir OUTDIR\n  --n N\n  --nsim NSIM\n  --m M\n  --missforest-draws MISSFOREST_DRAWS\n  --target-missing TARGET_MISSING\n  --mnar-strengths MNAR_STRENGTHS [MNAR_STRENGTHS ...]\n  --seed-start SEED_START\n  --mean-weight MEAN_WEIGHT\n  --noise-weight NOISE_WEIGHT\n  --max-epochs MAX_EPOCHS\n  --n-workers N_WORKERS\n  --resume, --no-resume\n",
+      "stderr": ""
+    }
+  ],
+  "wheel_sha256": "1e409b26597cec5bc9b9c656a42963e4f84d7d159cdb43ad591f98393f25c304",
+  "not_tested": [
+    "Paper-scale reruns",
+    "R comparator execution in this release check",
+    "GitHub CI on its declared Python 3.10 and 3.12 runners"
+  ],
+  "smoke_runs": {
+    "clinical": {
+      "coefficient_recovery.csv": {
+        "sha256": "4c3515998f7e7cb1012f2bcebfaa467bccc35d405d05f0f4a4b848f6b81b2627",
+        "contents": "seed,scenario,target_missing,method,term,truth,estimate,signed_error,absolute_error,squared_error,standard_error,lower,upper,covered,n_imputations_used,n_subjects_used\n21,baseline_harder,0.2,BRITS-MI,late_ast,0.32,0.8365381225187507,0.5165381225187506,0.5165381225187506,0.26681163201519587,1.6659762024883047,-2.4287152334591346,4.1017914784966365,1,3,80\n21,baseline_harder,0.2,BRITS-MI,late_alt,0.24,-0.6605190070361262,-0.9005190070361262,0.9005190070361262,0.8109344820333307,1.6680853196775969,-3.929906156744199,2.6088681426719464,1,3,80\n21,baseline_harder,0.2,BRITS-MI,late_platelet,-0.34,-0.004693199473486047,0.33530680052651396,0.33530680052651396,0.11243065047932742,1.2125366071461554,-2.381221279416343,2.3718348804693705,1,3,80\n21,baseline_harder,0.2,BRITS-MI,slope_ast,0.34,0.5530583446108858,0.21305834461088574,0.21305834461088574,0.045393858208330945,0.34575905790708183,-0.12461695621549362,1.2307336454372653,1,3,80\n21,baseline_harder,0.2,BRITS-MI,slope_alt,0.22,0.34848407188265035,0.12848407188265035,0.12848407188265035,0.01650815672754606,0.34386286132686117,-0.3254747519388885,1.0224428957041891,1,3,80\n21,baseline_harder,0.2,BRITS-MI,slope_platelet,-0.28,-0.6095906997966717,-0.32959069979667166,0.32959069979667166,0.10863002939245973,0.5671809713319957,-1.7212449763238284,0.502063576730485,1,3,80\n21,baseline_harder,0.2,BRITS-MI,diabetes,0.22,35.62091182953433,35.40091182953433,35.40091182953433,1253.2245583624638,46279.25310417168,-90670.04840376045,90741.29022741952,1,3,80\n21,baseline_harder,0.2,BRITS-MI,hypertension,0.16,1.6472982785763435,1.4872982785763436,1.4872982785763436,2.212056169456155,1.0504792715399311,-0.41160326014779347,3.7061998173004804,1,3,80\n21,baseline_harder,0.2,BRITS-MI,male,0.04,0.3666643238134437,0.32666432381344374,0.32666432381344374,0.10670958045249443,1.309595587199072,-2.2000958614093213,2.9334245090362088,1,3,80\n21,baseline_harder,0.2,BRITS-MI,late_ast_x_diabetes,0.24,49.83901284322828,49.59901284322828,49.59901284322828,2460.062075022724,95455.6996619484,-187039.89444364785,187139.57246933432,1,3,80\n21,baseline_harder,0.2,BRITS-MI,slope_ast_x_diabetes,0.2,22.956520833439317,22.756520833439318,22.756520833439318,517.8592404427577,29616.05831441737,-58023.451139462624,58069.3641811295,1,3,80\n21,baseline_harder,0.2,BRITS-MI,slope_platelet_x_hypertension,-0.18,0.37564116924181423,0.5556411692418142,0.5556411692418142,0.3087371089564104,0.6159275768246555,-0.8315546984195379,1.5828370369031664,1,3,80\n21,baseline_harder,0.2,BRITS-MI,hypertension_x_male,-0.08,-1.1522163876366367,-1.0722163876366366,1.0722163876366366,1.1496479819165581,1.641399891208523,-4.3693010586333045,2.064868283360031,1,3,80\n22,baseline_harder,0.2,BRITS-MI,late_ast,0.32,0.20121842460875217,-0.11878157539124784,0.11878157539124784,0.014109062652426695,1.0669155547308926,-1.8898976372093705,2.2923344864268747,1,3,80\n22,baseline_harder,0.2,BRITS-MI,late_alt,0.24,0.24544363462743943,0.0054436346274394365,0.0054436346274394365,2.9633157957057694e-05,1.1054908924624,-1.9212786998359066,2.4121659690907853,1,3,80\n22,baseline_harder,0.2,BRITS-MI,late_platelet,-0.34,-1.030861975881213,-0.6908619758812129,0.6908619758812129,0.4772902697184936,0.9080425978008402,-2.8105927639990496,0.7488688122366234,1,3,80\n22,baseline_harder,0.2,BRITS-MI,slope_ast,0.34,0.10649984427863336,-0.23350015572136668,0.23350015572136668,0.05452232272190249,0.317578098774922,-0.5159417915989176,0.7289414801561843,1,3,80\n22,baseline_harder,0.2,BRITS-MI,slope_alt,0.22,0.27410005266317383,0.05410005266317383,0.05410005266317383,0.002926815698158182,0.2106469567866647,-0.13876039609165408,0.6869605014180018,1,3,80\n22,baseline_harder,0.2,BRITS-MI,slope_platelet,-0.28,-0.7113245121279287,-0.43132451212792866,0.43132451212792866,0.1860408347623957,0.37473957497128196,-1.4458005826534888,0.02315155839763139,1,3,80\n22,baseline_harder,0.2,BRITS-MI,diabetes,0.22,0.8660492510035264,0.6460492510035264,0.6460492510035264,0.41737963472221745,0.7227650167024225,-0.5505441510187125,2.282642653025765,1,3,80\n22,baseline_harder,0.2,BRITS-MI,hypertension,0.16,0.09394618497773405,-0.06605381502226595,0.06605381502226595,0.004363106478995728,0.7335696071006621,-1.3438238250927614,1.5317161950482296,1,3,80\n22,baseline_harder,0.2,BRITS-MI,male,0.04,-0.9888087694441735,-1.0288087694441734,1.0288087694441734,1.0584474840852345,0.9583211894999166,-2.8670837864855945,0.8894662475972474,1,3,80\n22,baseline_harder,0.2,BRITS-MI,late_ast_x_diabetes,0.24,-1.4176777145758723,-1.6576777145758723,1.6576777145758723,2.7478954054014872,1.8163196551595098,-4.977598823100722,2.142243393948977,1,3,80\n22,baseline_harder,0.2,BRITS-MI,slope_ast_x_diabetes,0.2,-0.03828282682584085,-0.23828282682584087,0.23828282682584087,0.05677870556011367,0.4709800802132576,-0.9613868214796115,0.8848211678279299,1,3,80\n22,baseline_harder,0.2,BRITS-MI,slope_platelet_x_hypertension,-0.18,0.6703678051581833,0.8503678051581833,0.8503678051581833,0.7231254040495461,0.4720705121356321,-0.25487339679103416,1.5956090071074007,1,3,80\n22,baseline_harder,0.2,BRITS-MI,hypertension_x_male,-0.08,1.0748661740552483,1.1548661740552484,1.1548661740552484,1.3337158799770072,1.1837718047616699,-1.245283929191605,3.3950162773021013,1,3,80\n"
+      },
+      "manifest.json": {
+        "sha256": "288fc5737e75d497944a76da8d3394a29c9fe6819c3a4835c189cd9077f381e4",
+        "contents": "{\n  \"simulation\": {\n    \"n_runs\": 2,\n    \"n_subjects\": 80,\n    \"missing_rates\": [\n      0.2\n    ],\n    \"scenario\": \"baseline_harder\",\n    \"n_imputations\": 3,\n    \"first_seed\": 21\n  },\n  \"training\": {\n    \"epochs\": 2,\n    \"hidden_size\": 8,\n    \"batch_size\": 128,\n    \"learning_rate\": 0.001,\n    \"weight_decay\": 0.0001,\n    \"gradient_clip\": 5.0,\n    \"validation_fraction\": 0.2,\n    \"train_holdout_fraction\": 0.15,\n    \"validation_holdout_fraction\": 0.18,\n    \"residual_holdout_fraction\": 0.2,\n    \"residual_minimum\": 0.05,\n    \"variance_factor\": 0.85,\n    \"seed\": 21,\n    \"device\": \"cpu\",\n    \"losses\": {\n      \"reconstruction\": 1.0,\n      \"consistency\": 0.1,\n      \"trajectory_summary\": 0.35,\n      \"downstream\": 0.5\n    }\n  },\n  \"outputs\": [\n    \"coefficient_recovery.csv\",\n    \"replicate_metrics.csv\",\n    \"term_summary.csv\",\n    \"summary.csv\"\n  ]\n}\n"
+      },
+      "replicate_metrics.csv": {
+        "sha256": "5aa84127d51e6071a4087e7d446f136ec80cb05292ffafd81f4b646ecd0c486a",
+        "contents": "seed,scenario,target_missing,method,realized_missing_all,realized_missing_late,missing_cell_nrmse,trajectory_summary_nrmse,mean_absolute_coefficient_error,coefficient_mse,coverage,best_epoch,best_validation_loss,n_imputations\n21,baseline_harder,0.2,BRITS-MI,0.15416666666666667,0.19583333333333333,1.5974686767060498,0.6718148394081661,8.740135593218598,325.86797949827564,1.0,0,1.7231993675231934,3\n22,baseline_harder,0.2,BRITS-MI,0.1701388888888889,0.2111111111111111,1.520470104593029,0.6737223682436086,0.5520090971151907,0.5443557353066105,1.0,0,1.6647874116897583,3\n"
+      },
+      "summary.csv": {
+        "sha256": "beea9dd21c8dd33d4ea45997d69b64b4809086e9fed221c54c7afc9e53027faf",
+        "contents": "scenario,target_missing,method,mean_absolute_coefficient_error,coefficient_mse,coverage,missing_cell_nrmse,trajectory_summary_nrmse,n_runs,mean_absolute_bias\nbaseline_harder,0.2,BRITS-MI,4.646072345166894,163.20616761679113,1.0,1.5589693906495392,0.6727686038258873,2,4.335804235703036\n"
+      },
+      "term_summary.csv": {
+        "sha256": "b2858dbec7122606eebe52b917b9e5f29ea97b816f782c878a2bbc8f1f63e6f3",
+        "contents": "scenario,target_missing,method,term,signed_bias,coefficient_mse,coverage,empirical_se,mean_model_se,n_runs,absolute_bias\nbaseline_harder,0.2,BRITS-MI,diabetes,18.023480540268928,626.820968998593,1.0,24.575399008485707,23139.98793459419,2,18.023480540268928\nbaseline_harder,0.2,BRITS-MI,hypertension,0.7106222317770388,1.1082096379675752,1.0,1.0983857989538974,0.8920244393202966,2,0.7106222317770388\nbaseline_harder,0.2,BRITS-MI,hypertension_x_male,0.04132489320930588,1.2416819309467826,1.0,1.5747851816346394,1.4125858479850963,2,0.04132489320930588\nbaseline_harder,0.2,BRITS-MI,late_alt,-0.44753768620434337,0.4054820575956439,1.0,0.6406123274219855,1.3867881060699985,2,0.44753768620434337\nbaseline_harder,0.2,BRITS-MI,late_ast,0.1988782735637514,0.14046034733381127,1.0,0.4492388666135488,1.3664458786095985,2,0.1988782735637514\nbaseline_harder,0.2,BRITS-MI,late_ast_x_diabetes,23.970667564326202,1231.4049852140627,1.0,36.2439534746038,47728.75799080178,2,23.970667564326202\nbaseline_harder,0.2,BRITS-MI,late_platelet,-0.17777758767734947,0.2948604600989105,1.0,0.7256109004398058,1.0602896024734978,2,0.17777758767734947\nbaseline_harder,0.2,BRITS-MI,male,-0.3510722228153649,0.5825785322688645,1.0,0.9584642159583667,1.1339583883494944,2,0.3510722228153649\nbaseline_harder,0.2,BRITS-MI,slope_alt,0.09129206227291209,0.009717486212852122,1.0,0.05259744440200231,0.2772549090567629,2,0.09129206227291209\nbaseline_harder,0.2,BRITS-MI,slope_ast,-0.010220905555240467,0.04995809046511672,1.0,0.3157645437814308,0.33166857834100194,2,0.010220905555240467\nbaseline_harder,0.2,BRITS-MI,slope_ast_x_diabetes,11.259119003306738,258.9580095741589,1.0,16.259781600226738,14808.26464724879,2,11.259119003306738\nbaseline_harder,0.2,BRITS-MI,slope_platelet,-0.38045760596230016,0.14733543207742772,1.0,0.07193666857539144,0.47096027315163885,2,0.38045760596230016\nbaseline_harder,0.2,BRITS-MI,slope_platelet_x_hypertension,0.7030044871999988,0.5159312565029782,1.0,0.2084032028527632,0.5439990444801438,2,0.7030044871999988\n"
+      }
+    },
+    "image": {
+      "config.json": {
+        "sha256": "a4f2be9c0dfd5061e4f3ec346849950a8940a004f2465270b5ae31b254e68df6",
+        "contents": "{\n  \"output\": \".tmp/jbi_image_revision_20260913/image_smoke\",\n  \"n_subjects\": 200,\n  \"n_runs\": 2,\n  \"seed\": 970000,\n  \"missing_rate\": 0.5,\n  \"prototype_alpha\": 0.0,\n  \"trees\": 8,\n  \"model\": {\n    \"seed\": 970001,\n    \"cell_trees\": 8,\n    \"fusion_trees\": 8,\n    \"prototype_alpha\": 0.0,\n    \"prototype_power\": 1.0,\n    \"min_cell_training\": 30,\n    \"engine\": \"extra_trees\"\n  },\n  \"status\": \"New API, not exact historical retraining\"\n}\n"
+      },
+      "metrics.csv": {
+        "sha256": "4b1ada1480db9fe6008685f408fa9a1c586e893951bae787173f1826c5fbf5b0",
+        "contents": "auroc,auprc,accuracy,balanced_accuracy,macro_f1,log_loss,seed,method,n_subjects,missing_cell_rmse,realized_missing,status\n0.7877794830669395,0.5926126025306039,0.62,0.3731481481481482,0.35324200913242004,0.6712367994939566,970000,BRITS-MI-image,200,1.059133662458843,0.35436893203883496,new API verification run; not manuscript benchmark\n0.8601571840857556,0.5859105880119979,0.68,0.764102564102564,0.5099067599067599,0.7623264256064275,970001,BRITS-MI-image,200,1.0638047853763066,0.352165725047081,new API verification run; not manuscript benchmark\n"
+      }
+    }
+  },
+  "smoke_interpretation": "Two short runs per API verify execution only; they are not manuscript performance estimates."
+}

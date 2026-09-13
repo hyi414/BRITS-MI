@@ -1,0 +1,16 @@
+{
+  "n_subjects": 200,
+  "scenario": "baseline_harder",
+  "missing_rates": [0.2, 0.4],
+  "n_runs": 2,
+  "n_imputations": 5,
+  "epochs": 10,
+  "hidden_size": 32,
+  "batch_size": 64,
+  "losses": {
+    "reconstruction": 1.0,
+    "consistency": 0.1,
+    "trajectory_summary": 0.35,
+    "downstream": 0.5
+  }
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brits-mi"
+version = "0.3.0"
+description = "Analysis-aware multiple imputation for irregular longitudinal biomarkers using BRITS"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Haoyang Yi"}]
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "statsmodels>=0.14",
+  "torch>=2.4",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.0", "pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+brits-mi-sim = "brits_mi.cli:main"
+brits-mi-image = "brits_mi.image_fusion:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["reproducibility/reported_pipeline/**", "src/brits_mi/_image_reference.py", "src/longitudinal_sim/**"]

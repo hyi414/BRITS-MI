@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "BRITS-MI: analysis-aware multiple imputation for irregular longitudinal biomarkers"
+message: If you use this software, please cite the associated manuscript and this software release.
+type: software
+repository-code: "https://github.com/hyi414/BRITS-MI"
+url: "https://github.com/hyi414/BRITS-MI"
+authors:
+  - family-names: Yi
+    given-names: Haoyang
+  - family-names: Vellutini
+    given-names: Natalie L.
+  - family-names: Resser
+    given-names: J. Jackson
+  - family-names: Spann
+    given-names: Ashley L.
+  - family-names: Chen
+    given-names: Qingxia
+version: 0.3.0
+date-released: 2026-09-13
+license: MIT
