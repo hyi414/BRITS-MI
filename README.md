@@ -52,7 +52,7 @@ install.packages(c("mice", "missForest"))
 That command installs currently available releases, not necessarily the
 archived versions. Record `sessionInfo()` and package versions for a rerun.
 
-## Which implementation should I run?
+## Implementation details?
 
 | Goal | Route | Relation to the manuscript |
 | --- | --- | --- |
