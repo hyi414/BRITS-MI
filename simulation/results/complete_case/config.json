@@ -1,0 +1,18 @@
+{
+  "n": 500,
+  "runs_per_missing_percentage": 500,
+  "missing_percentages": [
+    40,
+    60
+  ],
+  "scenario": "baseline_harder",
+  "seeds": [
+    1200000,
+    1200499
+  ],
+  "model": "Unpenalized binomial-logit GLM; same 13 terms plus intercept",
+  "fitting": "Original maxiter=100 and minimum sample=25; no penalization",
+  "validation": "Full rank, no complete/quasi separation, convergence, finite SE",
+  "summary": "Conditional on valid fits; report success denominator alongside metrics",
+  "legacy_stability_filter": "Recorded separately, not used to declare MLE existence"
+}

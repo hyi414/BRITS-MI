@@ -13,6 +13,25 @@ target, classification after completing the clinical branch of a fusion model.
 This is research code, not a validated clinical decision tool. It contains no
 individual-level clinical records or weights fitted to the restricted cohort.
 
+## Simulation code and results gallery
+
+The [simulation folder](simulation/) provides executable clinical, MNAR, and
+image experiment launchers, complete-case diagnostics, saved synthetic-data
+results, and commands to reproduce the figures.
+
+[Run the simulations](simulation/README.md#run-the-experiments) |
+[Browse numerical results](simulation/results/) |
+[View all figures and plot data](simulation/visualization/)
+
+![Clinical association simulation results](simulation/visualization/clinical_n500.png)
+
+![Clinical-image fusion simulation results](simulation/visualization/image_fusion.png)
+
+Clinical points show Monte Carlo intervals; image boxes show variation across
+replicates. The image comparison uses the archived tree extension and forest
+surrogate. See the [gallery captions and completed-run inventory](simulation/)
+for definitions and the distinction between these experiments.
+
 ## Two entry points
 
 | Purpose | Public entry point | Implementation |
@@ -247,6 +266,7 @@ structure; they do not download missing benchmark files automatically.
 src/brits_mi/                  Recurrent API, pooling, calibration, image API
 src/longitudinal_sim/          Joint longitudinal/image generator and utilities
 examples/                     Small Python usage examples
+simulation/                   Runnable experiments, results, and figure gallery
 configs/                      Reference grids and archived configurations
 reproducibility/R/            R comparator interface
 reproducibility/reported_pipeline/  Historical simulations and dependencies

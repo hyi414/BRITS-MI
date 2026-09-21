@@ -10,3 +10,4 @@ recursive-include examples *.py
 recursive-include reproducibility *.R *.md *.json *.csv *.py
 recursive-include scripts *.py
 recursive-include tests *.py
+recursive-include simulation *.py *.md *.csv *.json *.png *.pdf *.svg

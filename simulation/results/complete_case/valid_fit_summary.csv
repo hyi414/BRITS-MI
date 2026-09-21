@@ -1,0 +1,3 @@
+missing_percentage,attempted_runs,valid_runs,valid_fraction,legacy_retained_runs,mean_complete_cases,min_complete_cases,max_complete_cases,mean_absolute_coefficient_bias,coefficient_mse,coverage,bias_mcse,mse_mcse,coverage_mcse
+40,500,4,0.008,0,55.59,39,74,1.3579992779638188,12.61107088682858,0.9807692307692307,0.5782215192101331,7.952990241184621,0.019230769230769218
+60,500,0,0.0,0,9.462,2,22,,,,,,

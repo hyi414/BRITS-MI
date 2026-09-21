@@ -1,0 +1,1001 @@
+seed,missing_percentage,n_subjects,n_complete,events,parameters_including_intercept,design_rank,original_minimum_n_met,lp_separation,lp_margin_objective,optimizer_converged,finite_estimates_and_se,legacy_stability_pass,valid_finite_mle,reason,warnings,max_abs_estimate,max_std_error
+1200000,40,500,49,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200001,40,500,55,3,14,14,True,True,59.55110028962248,True,True,False,False,separation,overflow encountered in exp,1737154547703484.0,77393094.92413835
+1200002,40,500,61,2,14,14,True,True,104.05522542432831,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",93.6301866711697,946776.4440078604
+1200003,40,500,56,1,14,14,True,True,140.56470239068435,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.266371267466226,178983.90019278048
+1200004,40,500,53,1,14,14,True,True,121.90323445253786,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",38.541455021914544,441460.19801060564
+1200005,40,500,60,2,14,14,True,True,116.42863647583182,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",370.5077312244006,901097.7276612223
+1200006,40,500,59,2,14,14,True,True,163.69226057586326,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",33.276650686163116,758734.1768326955
+1200007,40,500,50,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200008,40,500,62,3,14,14,True,True,98.73530786924543,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",793.4260987731166,798187.2805096328
+1200009,40,500,48,2,14,14,True,True,158.6449449580813,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",48.32551623549404,269915.08915136126
+1200010,40,500,56,1,14,14,True,True,182.91007105066126,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",35.46902751259862,422468.51636787027
+1200011,40,500,44,2,14,14,True,True,115.03694826538282,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",36.646863724133894,337016.4041982294
+1200012,40,500,55,1,14,14,True,True,173.16304890791304,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",30.76753050804357,201735.51104619683
+1200013,40,500,52,3,14,14,True,True,83.88956805552472,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",77.98103215661648,298573.4756025434
+1200014,40,500,45,2,14,14,True,True,97.7882546342931,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",120.62943668342055,3489296.985622562
+1200015,40,500,51,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200016,40,500,44,2,14,14,True,True,80.57416243134067,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",38.179498790940315,594767.9033379371
+1200017,40,500,64,7,14,14,True,True,3.949235785689598,True,True,False,False,separation,,376.41905655231,308911.0639021711
+1200018,40,500,62,4,14,14,True,True,52.01750595568097,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",249.83461166296092,630765.6452807761
+1200019,40,500,53,3,14,14,True,True,97.84039685264673,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",161.6258707111374,1423444.0086788696
+1200020,40,500,51,2,14,14,True,True,41.87083541566413,True,True,False,False,separation,,21.627820525196803,80696.7965123203
+1200021,40,500,46,1,14,14,True,True,138.19199912319047,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",42.847888286595726,343227.06940054335
+1200022,40,500,52,4,14,14,True,True,46.71087553820661,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1164.2517076788677,2023423.8501268507
+1200023,40,500,60,3,14,14,True,True,118.51413866255496,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",260.6897760073497,529216.9936663598
+1200024,40,500,71,3,14,14,True,True,136.68440554109046,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",147.01392058369424,248502.56774467244
+1200025,40,500,50,2,14,14,True,True,74.95522406379587,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",669.9295871795252,4544940.784818292
+1200026,40,500,54,1,14,14,True,True,103.8297100253119,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",438.05404765522087,883568.5749802096
+1200027,40,500,45,2,14,14,True,True,101.78504352651734,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",357.65073815333074,836919.2980565961
+1200028,40,500,47,1,14,14,True,True,141.40169590386054,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",79.2086871741676,588259.2567715116
+1200029,40,500,63,5,14,14,True,True,57.42320079839662,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1425.8390014522602,53032016.10459365
+1200030,40,500,56,4,14,14,True,True,61.85715926991294,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",146.92362814626313,419290.51522190525
+1200031,40,500,59,1,14,14,True,True,122.28246056867607,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",102.03721065877684,967556.674040045
+1200032,40,500,45,3,14,14,True,True,55.46981605538148,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",160.22517912846723,1238354.2100804653
+1200033,40,500,63,1,14,14,True,True,127.31439023779394,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",119.0549738715281,906362.0847682739
+1200034,40,500,63,8,14,14,True,False,-0.0,True,True,False,True,valid,,8.45944599893738,5.038172088272441
+1200035,40,500,58,2,14,14,True,True,134.34570041804702,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",84.48371915065823,305755.68838747387
+1200036,40,500,41,2,14,14,True,True,67.47514922891905,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",71.73552747033567,331079.3020362891
+1200037,40,500,54,3,14,14,True,True,120.37362044631634,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",72.05421480320359,244939.65763411453
+1200038,40,500,57,1,14,14,True,True,183.9649760640308,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",36.081142432202505,199134.59498675296
+1200039,40,500,47,3,14,14,True,True,74.57520253336274,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",871.8234649476599,2760849.622031117
+1200040,40,500,57,1,14,14,True,True,141.15167065770956,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",55.39745270128348,486135.2511975873
+1200041,40,500,55,1,14,14,True,True,194.27221266252425,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",20.493236198238364,441180.1896059291
+1200042,40,500,45,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200043,40,500,49,3,14,14,True,True,69.61100469020653,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",220.63352268934125,371694.4421760169
+1200044,40,500,60,3,14,14,True,True,64.93009124526235,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",626.5054638139042,1977559.488852136
+1200045,40,500,58,3,14,14,True,True,46.07402253833119,True,True,False,False,separation,,81.28568090222748,279376.93364071054
+1200046,40,500,51,2,14,14,True,True,76.94152801574816,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",2555.544862138483,5121249.155044753
+1200047,40,500,50,1,14,14,True,True,109.05767068863788,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",55.3470265002939,316943.77074117487
+1200048,40,500,53,2,14,14,True,True,193.62303292635602,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",45.5048164427476,460414.3450836354
+1200049,40,500,58,4,14,14,True,True,21.411010335775345,True,True,False,False,separation,,23.419370273826537,134763.96948949952
+1200050,40,500,52,2,14,14,True,True,132.8160864051298,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",88.72668815018085,1338676.6653438313
+1200051,40,500,49,2,14,14,True,True,70.85064493862768,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",182.3754049430832,1008193.944054046
+1200052,40,500,55,2,14,14,True,True,129.60142654669377,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",202.03018012298216,1517365.2005400031
+1200053,40,500,59,2,14,14,True,True,164.96893283057938,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",31.05130749238665,378463.17316709016
+1200054,40,500,55,1,14,14,True,True,94.06326457078565,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",566.4367562634507,971361.8873691211
+1200055,40,500,49,2,14,14,True,True,102.9059857353591,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",78.20524411893044,560815.3413972388
+1200056,40,500,59,1,14,14,True,True,191.03507020148106,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",34.27931267115824,861454.90791131
+1200057,40,500,58,3,14,14,True,True,120.8592904749964,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.16312450957383,539163.8995892928
+1200058,40,500,59,1,14,14,True,True,147.56125870504533,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",33.513100524800045,1975046.560639771
+1200059,40,500,56,3,14,14,True,True,77.32847161117597,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",78.43324328716862,674778.5071659761
+1200060,40,500,47,1,14,14,True,True,120.9272771342312,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",69.98022927078415,1928346.577433432
+1200061,40,500,68,3,14,14,True,True,36.74607996931219,True,True,False,False,separation,,80.2176799176518,1011132.1866102981
+1200062,40,500,51,1,14,14,True,True,109.5103285812845,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",91.30188483613472,347712.950593935
+1200063,40,500,72,5,14,14,True,True,112.47747186922223,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",266.7451675112346,264460.32485471724
+1200064,40,500,53,2,14,14,True,True,128.4958886900147,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",127.54038269704911,2738763.2980145616
+1200065,40,500,56,2,14,14,True,True,111.92257546963538,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",221.29912835860623,477136.86743879534
+1200066,40,500,51,2,14,14,True,True,112.60048992394816,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",46.25375278310114,1586922.881296386
+1200067,40,500,53,2,14,14,True,True,87.60599733554096,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",262.8880274180677,1700426.3507121417
+1200068,40,500,61,2,14,14,True,True,45.67208994647847,True,True,False,False,separation,,20.513128373516107,80018.01344550338
+1200069,40,500,61,2,14,14,True,True,187.1997934053571,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",99.19535977968526,702983.9386318382
+1200070,40,500,59,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200071,40,500,57,1,14,14,True,True,130.07109514451207,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",150.8035842411432,2473304.6691575423
+1200072,40,500,49,6,14,14,True,False,-0.0,True,True,False,True,valid,,14.296793367005348,12.88218589150328
+1200073,40,500,43,3,14,14,True,True,63.7942790516993,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",121.39056054584861,309322.5050609667
+1200074,40,500,60,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200075,40,500,51,2,14,14,True,True,119.24194243910162,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",62.846485625635914,354133.8329745492
+1200076,40,500,54,3,14,14,True,True,124.64322102203862,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",757.9579514707166,16275066.02229241
+1200077,40,500,62,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200078,40,500,56,3,14,14,True,True,99.21845422075397,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",184.84175700258038,464891.01973801764
+1200079,40,500,57,1,14,14,True,True,126.97960721095924,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",38.18827966979172,354731.76795141003
+1200080,40,500,59,1,14,14,True,True,175.35462842719838,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",30.278639629095313,591433.7171945696
+1200081,40,500,56,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200082,40,500,49,2,14,14,True,True,45.507475933634296,True,True,False,False,separation,,37.17899716465446,90064.6120038405
+1200083,40,500,57,1,14,14,True,True,166.8149275871475,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",33.033012970558275,206530.13760830808
+1200084,40,500,55,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200085,40,500,45,2,14,14,True,True,148.5503852190856,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",56.894365580913004,1327983.7697434141
+1200086,40,500,60,3,14,14,True,True,130.08208409267266,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",130.94055200274738,762874.1063259491
+1200087,40,500,48,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200088,40,500,67,3,14,14,True,True,45.02673192095269,True,True,False,False,separation,,56.97420139264042,191328.68896807477
+1200089,40,500,42,2,14,14,True,True,122.22715301345067,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",32.755452996556826,579427.4164171056
+1200090,40,500,58,3,14,14,True,True,21.148264400668225,True,True,False,False,separation,,20.167411988604186,74972.81791251092
+1200091,40,500,56,1,14,14,True,True,110.97674911325204,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",78.19950131622554,1374704.8556923827
+1200092,40,500,66,2,14,14,True,True,151.55314760781272,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",57.88832145689674,321318.92103048664
+1200093,40,500,60,2,14,14,True,True,162.00008691260055,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",39.354505942465806,1937346.4949808526
+1200094,40,500,63,3,14,14,True,True,72.43655146733322,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",195.62222818166282,1127927.0692442427
+1200095,40,500,55,6,14,14,True,True,4.0765655890337795,True,True,False,False,separation,,117.94107627522354,87302.20692943576
+1200096,40,500,53,7,14,14,True,True,38.40656568115921,True,True,False,False,separation,overflow encountered in exp,2900756924926910.0,86465110.24535742
+1200097,40,500,66,3,14,14,True,True,113.26373117743755,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",907.2304985403216,1667860.1991497546
+1200098,40,500,46,1,14,14,True,True,135.00590063702873,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",67.27894732359265,187323.8980034956
+1200099,40,500,64,5,14,14,True,True,52.167396795290756,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",581.0378752708577,739765.3959808209
+1200100,40,500,66,1,14,14,True,True,162.94792842944716,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",70.56556566454323,200392.72465889744
+1200101,40,500,54,1,14,14,True,True,165.46579689459128,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",66.26525268806016,543238.6310608425
+1200102,40,500,59,2,14,14,True,True,23.174520917684347,True,True,False,False,separation,,66.54664898294831,26323046.76389886
+1200103,40,500,52,1,14,14,True,True,100.72463458067486,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",125.78121599440033,580095.9433139879
+1200104,40,500,49,3,14,14,True,True,57.70622338620901,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",428.47929387455025,2326332.920762171
+1200105,40,500,50,3,14,14,True,True,68.2630758258332,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",420.20206390801445,387920.42335234676
+1200106,40,500,67,3,14,14,True,True,103.13329871229203,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",551.6526692878383,600563.347175107
+1200107,40,500,56,2,14,14,True,True,79.34957560196224,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",181.76996438219342,448320.2295129229
+1200108,40,500,59,2,14,14,True,True,108.47222526637503,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",158.16126383106922,4536779.824708567
+1200109,40,500,49,2,14,14,True,True,124.91113766459664,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",70.76044153312742,397191.4327591763
+1200110,40,500,48,1,14,14,True,True,112.2539696889111,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",68.18114733557243,349373.48800857994
+1200111,40,500,54,2,14,14,True,True,131.65428484292923,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",221.27680636117003,1523609.901693494
+1200112,40,500,57,3,14,14,True,True,98.75839730421474,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",84.98451204710793,209697.7648616019
+1200113,40,500,53,1,14,14,True,True,104.87524677766646,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",90.91838667552308,525937.0386488573
+1200114,40,500,57,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200115,40,500,58,1,14,14,True,True,159.59949374249928,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",123.52524987466111,707925.5819783107
+1200116,40,500,61,4,14,14,True,True,93.66665317069764,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",112.29520687809466,414173.81731245224
+1200117,40,500,56,1,14,14,True,True,86.30635422177446,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",139.50977726220123,949149.0477315416
+1200118,40,500,56,6,14,14,True,True,11.189087849202846,True,True,False,False,separation,,18.166162709647597,53033.62069288642
+1200119,40,500,40,0,14,13,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200120,40,500,52,3,14,14,True,True,65.58077700387922,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1176.8610288984662,2173496.4454158284
+1200121,40,500,59,3,14,14,True,True,78.2825278239999,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",96.01349408325575,688145.7060226952
+1200122,40,500,43,1,14,14,True,True,145.81963995679794,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",17.714679534256977,295478.43925929704
+1200123,40,500,59,3,14,14,True,True,136.48998883919117,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",183.02093527047415,578220.567724637
+1200124,40,500,48,2,14,14,True,True,53.76528811213389,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",298.43057057370004,2742483.6816579727
+1200125,40,500,47,4,14,14,True,True,29.30059282723965,True,True,False,False,separation,,29.623116827839162,47903.87634226416
+1200126,40,500,53,2,14,14,True,True,91.43449877945332,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",109.76977822988232,449523.94740080414
+1200127,40,500,60,4,14,14,True,True,92.69391833707645,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",138.27241225997358,611500.7728137533
+1200128,40,500,49,1,14,14,True,True,159.88812212412282,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",51.14850961673132,459428.8040348652
+1200129,40,500,50,4,14,14,True,True,63.3162306506884,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",156.25962189139608,1052109.2787456787
+1200130,40,500,64,3,14,14,True,True,87.1906515918756,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",143.53050616778341,2078353.5661442052
+1200131,40,500,58,3,14,14,True,True,161.4008518586343,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.16642717303861,287013.9454390305
+1200132,40,500,54,3,14,14,True,True,50.73362665132396,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",164.67166553275874,711689.376423553
+1200133,40,500,57,2,14,14,True,True,119.15682193042113,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",48.51289966479003,267380.2091612161
+1200134,40,500,59,2,14,14,True,True,130.93580026299725,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",57.08086395714377,641799.7027663206
+1200135,40,500,61,2,14,14,True,True,144.5521857416501,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",102.46172364803124,933995.3174336061
+1200136,40,500,50,3,14,14,True,True,49.56800912024097,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",3827.757626856155,4121412.9552158904
+1200137,40,500,67,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200138,40,500,59,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200139,40,500,54,1,14,14,True,True,107.33699584224934,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",573.2518134335673,3182954.868533
+1200140,40,500,56,2,14,14,True,True,108.79241460480347,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",107.08415619948232,384324.87539145304
+1200141,40,500,42,1,14,14,True,True,125.405294432058,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",39.74131995631171,382173.98015010095
+1200142,40,500,57,4,14,14,True,True,41.91094613869724,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1168.4151760192217,1008583.317276566
+1200143,40,500,47,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200144,40,500,65,1,14,14,True,True,195.5303488087403,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",19.27988209972007,201199.9777261608
+1200145,40,500,57,3,14,14,True,True,65.68363042617793,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",193.95040756894338,727450.1743339216
+1200146,40,500,55,2,14,14,True,True,101.5422633960259,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",462.69631794437845,2094421.472659503
+1200147,40,500,55,2,14,14,True,True,127.04493114803587,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",68.51492769365633,1646002.2046918098
+1200148,40,500,61,2,14,14,True,True,139.32594756810323,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",75.4872765426057,334195.95228204114
+1200149,40,500,65,4,14,14,True,True,51.47497467320683,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",266.1585132560042,758759.7251568012
+1200150,40,500,43,3,14,14,True,True,78.85551174948627,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",299.8736436974959,614256.7836472581
+1200151,40,500,53,2,14,14,True,True,77.04543948708518,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",134.8233471210125,1460890.4174682696
+1200152,40,500,52,5,14,14,True,True,11.750834430353606,True,True,False,False,separation,,87.33815800567547,107434.71717843616
+1200153,40,500,57,2,14,14,True,True,92.50576036671981,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",65.82077283711455,371250.28182787035
+1200154,40,500,57,1,14,14,True,True,172.45354770725933,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",67.7565263799525,197527.12198594288
+1200155,40,500,61,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200156,40,500,50,1,14,14,True,True,107.87277984550276,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",59.75905494223405,350726.23356835305
+1200157,40,500,49,2,14,14,True,True,44.1806820651962,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",133.58717273711449,1139426.127456083
+1200158,40,500,68,4,14,14,True,True,117.85931983404339,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",138.24413825497354,198165.51560932165
+1200159,40,500,57,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200160,40,500,42,3,14,14,True,True,100.93413795951307,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",52.80875681622014,387718.4237964503
+1200161,40,500,49,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200162,40,500,52,3,14,14,True,True,57.67987341379287,True,True,False,False,separation,,40.21990582812902,441452.2619881729
+1200163,40,500,60,1,14,14,True,True,122.09851191436353,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",56.38060043162966,2041538.272989888
+1200164,40,500,47,4,14,14,True,True,46.296601070405494,True,True,False,False,separation,,68.84011379138454,216940.0671653428
+1200165,40,500,63,2,14,14,True,True,121.17754879447875,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",91.46273751609061,1677117.4573627175
+1200166,40,500,51,3,14,14,True,True,94.62364646564654,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",76.83267353723087,315896.1996621733
+1200167,40,500,59,2,14,14,True,True,161.44609155554497,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",61.670252166158775,728727.0727448933
+1200168,40,500,65,3,14,14,True,True,71.58969867843798,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1181.5464289998101,1833290.9387767361
+1200169,40,500,46,2,14,14,True,True,57.3858269945271,True,True,False,False,separation,,21.835382886557987,673605.0485730304
+1200170,40,500,55,1,14,14,True,True,133.26744154443628,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",71.84431894665167,497777.3027014093
+1200171,40,500,54,3,14,14,True,True,100.15161865379314,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",63.90640166431446,1309390.5689999703
+1200172,40,500,67,2,14,14,True,True,131.14893243653944,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",294.3821697700333,2815298.84339568
+1200173,40,500,51,3,14,14,True,True,29.282756286085757,True,True,False,False,separation,,47.3276144539298,911056.9874770248
+1200174,40,500,63,1,14,14,True,True,155.81595573673457,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.44689112911584,251801.66111570544
+1200175,40,500,52,2,14,14,True,True,92.88465219483275,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",134.46342820045246,398393.5666908809
+1200176,40,500,67,3,14,14,True,True,90.35045795110142,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",141.13814536416322,295264.5428810017
+1200177,40,500,61,1,14,14,True,True,166.00871216185075,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",72.6967395126104,800764.8572493237
+1200178,40,500,51,4,14,14,True,True,62.656738161523656,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1105.441130947279,3221642.476183571
+1200179,40,500,53,1,14,14,True,True,112.54823830110561,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",127.59501632368011,2061637.440144402
+1200180,40,500,52,3,14,14,True,True,16.94936854434968,True,True,False,False,separation,,281.59154304478443,278513.6805724071
+1200181,40,500,52,3,14,14,True,True,67.97984193832578,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",230.44074462778727,652022.9882044338
+1200182,40,500,55,2,14,14,True,True,99.17514181527048,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",103.65629406513459,478764.52396168205
+1200183,40,500,50,1,14,14,True,True,145.89159200066376,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",28.09871539384917,412777.4829251532
+1200184,40,500,56,1,14,14,True,True,141.47404774280065,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",38.554018338140466,860787.667647203
+1200185,40,500,48,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200186,40,500,56,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200187,40,500,62,1,14,14,True,True,204.12210062004118,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",40.60430678872795,218286.85293038306
+1200188,40,500,50,1,14,14,True,True,166.19062774256741,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",56.86714756297178,311750.5014142181
+1200189,40,500,67,2,14,14,True,True,151.13206976770329,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",108.95026351104869,238875.63206699255
+1200190,40,500,56,6,14,14,True,True,67.68359093420369,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",113.48037295628654,6039101.235926259
+1200191,40,500,62,2,14,14,True,True,104.52815651304543,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",195.3585605502175,7302080.272875718
+1200192,40,500,66,2,14,14,True,True,121.79210273967608,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",467.6704428474085,9413116.073696913
+1200193,40,500,64,2,14,14,True,True,118.85682495346958,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",96.44063013967269,2880636.6739902217
+1200194,40,500,58,2,14,14,True,True,132.61892110236175,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",61.021738881073375,194284.7425106096
+1200195,40,500,59,2,14,14,True,True,117.77043907611102,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",122.87916471831542,2274085.2216513827
+1200196,40,500,71,3,14,14,True,True,69.2956510896561,True,True,False,False,separation,,22.3602865383436,53651.05282152571
+1200197,40,500,63,1,14,14,True,True,155.67974877370762,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",188.28474274045342,863927.5527123834
+1200198,40,500,63,3,14,14,True,True,75.28759361856258,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",523.2158323835578,1502858.881202055
+1200199,40,500,67,3,14,14,True,True,30.610327582045723,True,True,False,False,separation,,76.6204755059039,55887.55724785963
+1200200,40,500,65,5,14,14,True,True,34.013699880151755,True,True,False,False,separation,,26.448072178091408,112001.74209371585
+1200201,40,500,67,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200202,40,500,55,1,14,14,True,True,134.5704677930981,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",34.25007806956958,447405.4430576432
+1200203,40,500,60,5,14,14,True,True,56.57969159219689,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",390.3641340441451,495774.2757210145
+1200204,40,500,57,3,14,14,True,True,100.8497191098977,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",75.00709304412024,497302.6063619479
+1200205,40,500,63,3,14,14,True,True,165.08716293152852,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",56.46172484818855,1746193.4195932373
+1200206,40,500,64,4,14,14,True,True,69.21013656372746,True,True,False,False,separation,,43.982572932188184,93201.44511660523
+1200207,40,500,60,6,14,14,True,True,36.693611070646,True,True,False,False,separation,,165.40542644356066,171870.7232404184
+1200208,40,500,56,3,14,14,True,True,151.66462680502042,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",63.044407491789585,575600.2855750939
+1200209,40,500,54,4,14,14,True,True,100.97673072709125,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",168.2996909640864,3210949.186523046
+1200210,40,500,59,2,14,14,True,True,110.19360840552916,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",245.01204971333567,60989367.68742868
+1200211,40,500,59,1,14,14,True,True,176.82850897073573,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.52140206988775,598572.3003275729
+1200212,40,500,49,1,14,14,True,True,122.68991707631638,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",135.37628474035512,416944.09410105
+1200213,40,500,56,3,14,14,True,True,54.677780975857615,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",474.53502637288557,1253350.3423298653
+1200214,40,500,63,3,14,14,True,True,107.6939419059365,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",134.33477073982027,862565.0890274226
+1200215,40,500,46,4,14,14,True,True,40.66617159289153,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",596.2078566124403,16477490.2485797
+1200216,40,500,50,1,14,14,True,True,136.0313371581798,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",76.08243369467165,186286.04975247892
+1200217,40,500,58,1,14,14,True,True,145.42221657398986,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",82.77220446963872,1381170.8750660678
+1200218,40,500,55,2,14,14,True,True,89.97635204375499,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",666.5789592772148,620176.4521358871
+1200219,40,500,71,3,14,14,True,True,157.20764026804625,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",83.3298060399224,595869.8007410069
+1200220,40,500,47,1,14,14,True,True,140.110564983426,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",75.88949696292997,274764.58385433676
+1200221,40,500,61,2,14,14,True,True,129.11524816028452,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",862.1807452713591,10239264.369050084
+1200222,40,500,58,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200223,40,500,55,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200224,40,500,59,2,14,14,True,True,98.48793799207141,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",2045.8855212989504,5737951.881677157
+1200225,40,500,63,2,14,14,True,True,176.88177688865716,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",104.28425354784764,624661.4839068804
+1200226,40,500,59,3,14,14,True,True,115.47794832786765,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",154.5748758472838,613294.4083265126
+1200227,40,500,58,2,14,14,True,True,114.31231234805406,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1413.178672136363,19388074.969692387
+1200228,40,500,50,1,14,14,True,True,109.74263907391422,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",119.18797171167954,406744.4917835708
+1200229,40,500,63,4,14,14,True,True,44.54326588644623,True,True,False,False,separation,,236.80268812977647,386795.4696892888
+1200230,40,500,58,2,14,14,True,True,140.06924370935337,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",93.68088458623049,341166.31689850957
+1200231,40,500,60,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200232,40,500,52,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200233,40,500,44,2,14,14,True,True,82.73377891721385,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",516.7551250097395,1162226.3606969381
+1200234,40,500,50,1,14,14,True,True,136.49254861071876,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",31.77312131254388,151322.81873086837
+1200235,40,500,53,1,14,14,True,True,131.71212264198576,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.77007682756597,730024.9626506349
+1200236,40,500,65,6,14,14,True,True,118.75660747528033,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",213.04673954221033,529689.7051887452
+1200237,40,500,44,1,14,14,True,True,120.4235646074939,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",37.47240430820342,331318.8148830541
+1200238,40,500,52,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200239,40,500,50,1,14,14,True,True,152.68616318847174,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",68.239400863329,1114589.536285376
+1200240,40,500,52,2,14,14,True,True,123.42215540990999,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",117.46076241891907,1071271.7543104112
+1200241,40,500,61,2,14,14,True,True,156.3580716505094,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",54.75702342596581,274306.5351120859
+1200242,40,500,49,3,14,14,True,True,87.22649057007801,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",108.12040779654832,596977.2584314808
+1200243,40,500,63,2,14,14,True,True,169.94563422846798,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",92.0073324047131,485374.1592552636
+1200244,40,500,66,2,14,14,True,True,103.20329458475979,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",66.67013329252505,331617.78776117845
+1200245,40,500,61,5,14,14,True,True,95.48516681249792,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",102.29481066127718,241537.75517254366
+1200246,40,500,45,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200247,40,500,64,3,14,14,True,True,126.26601126814148,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",118.1118230747808,993389.2725330681
+1200248,40,500,51,1,14,14,True,True,128.4303959584866,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",39.17349819805129,6502276.043501376
+1200249,40,500,53,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200250,40,500,67,1,14,14,True,True,152.49679836921376,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",174.04636122016956,2529602.8044524044
+1200251,40,500,45,1,14,14,True,True,109.89068381599039,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",1530.4143641000537,15775303.561467914
+1200252,40,500,59,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200253,40,500,50,1,14,14,True,True,114.29052193557949,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",88.31290603497655,577648.4017799973
+1200254,40,500,73,3,14,14,True,True,107.40853476884753,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",104.71030920254658,814205.0161990286
+1200255,40,500,54,2,14,14,True,True,94.98693548856187,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",433.7686197793469,1822980.640910296
+1200256,40,500,61,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200257,40,500,53,2,14,14,True,True,179.01850024668462,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",28.256716077912515,389026.0680430468
+1200258,40,500,57,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200259,40,500,52,7,14,14,True,False,-0.0,True,True,False,True,valid,,2.984346055110354,4.007134942891403
+1200260,40,500,66,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200261,40,500,58,1,14,14,True,True,155.27135106574616,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",38.36534437366586,362909.17375569476
+1200262,40,500,49,1,14,14,True,True,146.45254943826444,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",27.935361894991495,3122853.518278447
+1200263,40,500,52,1,14,14,True,True,120.00817951667956,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",55.17699347123935,392959.6706830404
+1200264,40,500,70,3,14,14,True,True,173.5784119329001,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",72.94828043393474,447607.6758770707
+1200265,40,500,45,2,14,14,True,True,60.65965739237713,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",97.94902613170709,1317845.5824223324
+1200266,40,500,56,3,14,14,True,True,78.66800789708486,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",872.2479281082078,713097.5915130631
+1200267,40,500,56,3,14,14,True,True,76.95858209291252,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",110.5746923160404,232649.93783394972
+1200268,40,500,60,1,14,14,True,True,84.6218900942827,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",161.95109106276465,294384.7976539574
+1200269,40,500,56,1,14,14,True,True,186.97485689170807,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",25.218631917141145,186790.91784356325
+1200270,40,500,55,1,14,14,True,True,158.50008089531053,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",34.50011037225654,108834.1743521034
+1200271,40,500,42,4,14,14,True,True,66.29946731878175,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",172.5868815425265,373998.0175163668
+1200272,40,500,58,6,14,14,True,True,16.211505784173227,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",7114.795343295732,3684899.2791002993
+1200273,40,500,60,3,14,14,True,True,51.82133298453552,True,True,False,False,separation,overflow encountered in exp,1634527388306239.5,64400836.24935496
+1200274,40,500,52,1,14,14,True,True,137.14918624273992,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",76.03573253148949,286241.52952065005
+1200275,40,500,56,3,14,14,True,True,161.7804381430771,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",83.92804087221931,450669.282745823
+1200276,40,500,63,1,14,14,True,True,181.65276491654674,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",80.50698345011203,327521.52874746907
+1200277,40,500,65,5,14,14,True,True,20.46296142200311,True,True,False,False,separation,,38.60196370598486,45649.39607033426
+1200278,40,500,57,2,14,14,True,True,85.66108002263377,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",67.0413013110478,430090.68806315534
+1200279,40,500,44,1,14,14,True,True,127.83943487889846,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",25.912031190397336,210873.4485038193
+1200280,40,500,62,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200281,40,500,58,3,14,14,True,True,97.75022704262601,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",69.2129470981015,262400.1322769314
+1200282,40,500,46,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200283,40,500,57,2,14,14,True,True,116.02238214486772,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",95.7559189289745,877733.7547203226
+1200284,40,500,47,4,14,14,True,True,53.87336218838087,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1136.3969651647585,1070466.469342559
+1200285,40,500,48,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200286,40,500,46,2,14,14,True,True,86.4267053945849,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",216.61720980907222,3333476.3531497987
+1200287,40,500,57,2,14,14,True,True,100.87993974237752,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",294.5710269271467,1326469.7103778245
+1200288,40,500,53,4,14,14,True,True,41.454293561153406,True,True,False,False,separation,,21.629421511303757,80694.47566396497
+1200289,40,500,46,4,14,14,True,True,37.76591385792673,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",250.20309941797288,306774.51771497173
+1200290,40,500,55,1,14,14,True,True,140.02654289496624,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",72.59542322434814,262620.9626433385
+1200291,40,500,46,2,14,14,True,True,135.5132825321048,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",99.83264670579484,947715.6744971591
+1200292,40,500,59,1,14,14,True,True,172.0134145697061,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",58.977475355928505,546281.2598444014
+1200293,40,500,58,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200294,40,500,63,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200295,40,500,66,5,14,14,True,True,24.47574921512109,True,True,False,False,separation,,20.727945195617284,113484.40179613496
+1200296,40,500,59,1,14,14,True,True,173.66988681756402,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",46.082617817855414,249157.04109221263
+1200297,40,500,72,3,14,14,True,True,97.71025669751083,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",94.63856971207278,328559.64755810826
+1200298,40,500,65,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200299,40,500,57,4,14,14,True,True,68.68787573328393,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",719.1375469176309,19495839.584810283
+1200300,40,500,56,2,14,14,True,True,74.23405735450321,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",1774.965489113617,3116991.1649017553
+1200301,40,500,74,5,14,14,True,True,23.86937786869005,True,True,False,False,separation,,197.42367751362033,404254.04761522525
+1200302,40,500,60,1,14,14,True,True,147.03072710424289,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",32.86013170226369,313952.694113633
+1200303,40,500,47,3,14,14,True,True,54.43819241815201,True,True,False,False,separation,,21.409359741873466,522959.40288049605
+1200304,40,500,47,2,14,14,True,True,130.0179860620877,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",35.020007334990154,390909.5915502755
+1200305,40,500,61,3,14,14,True,True,58.952873126659966,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",301.48628499475336,1489577.9608504924
+1200306,40,500,61,4,14,14,True,True,23.182726503687157,True,True,False,False,separation,,25.887881551244913,55112.36227535788
+1200307,40,500,49,3,14,14,True,True,58.45102119055357,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",171.6804203158127,918219.3237978708
+1200308,40,500,72,8,14,14,True,True,22.999999999999993,True,True,False,False,separation,,28.265192001440237,11499.113180247758
+1200309,40,500,66,4,14,14,True,True,69.80323016044407,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",298.5223242210809,598218.2845609407
+1200310,40,500,50,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200311,40,500,61,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200312,40,500,57,1,14,14,True,True,123.56467908762718,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",69.99071460192718,4850623.357055832
+1200313,40,500,59,1,14,14,True,True,139.47988538076703,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",53.19810364908332,268566.62030813476
+1200314,40,500,53,2,14,14,True,True,109.33956853210509,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",70.12978596172047,386134.30102221173
+1200315,40,500,50,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200316,40,500,58,3,14,14,True,True,110.42217599703932,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",134.14648940154993,294564.2946132376
+1200317,40,500,52,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200318,40,500,51,1,14,14,True,True,125.22719369608183,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",33.57477357295454,315204.3950479746
+1200319,40,500,65,3,14,14,True,True,10.0,True,True,False,False,separation,,19.435668528540894,12051.31811879142
+1200320,40,500,63,2,14,14,True,True,65.08409076777404,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",471.328842386,1371222.7400112145
+1200321,40,500,57,4,14,14,True,True,54.95261956081403,True,True,False,False,separation,,505.86931283218894,2186985.8219927126
+1200322,40,500,51,2,14,14,True,True,120.9338887095083,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",52.392139300640714,494264.98479088064
+1200323,40,500,46,1,14,14,True,True,134.8960167067344,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",37.67968915301381,521723.7929655993
+1200324,40,500,56,3,14,14,True,True,87.7300936206239,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",181.30593075305336,881158.8736282192
+1200325,40,500,66,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200326,40,500,42,1,14,14,True,True,132.46111991631687,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",19.61311226501092,912057.323840493
+1200327,40,500,56,3,14,14,True,True,77.19282106067989,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1576.4092854652586,14546928.772020778
+1200328,40,500,51,2,14,14,True,True,94.06485037172892,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",162.97317956295024,1263212.5239876958
+1200329,40,500,47,3,14,14,True,True,25.308437014521726,True,True,False,False,separation,,154.64259656762175,869495.0933332287
+1200330,40,500,60,2,14,14,True,True,188.11014613056082,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",49.88535590697821,195467.2090242695
+1200331,40,500,57,4,14,14,True,True,25.23209539111169,True,True,False,False,separation,,20.729393332538805,71428.70713123148
+1200332,40,500,58,3,14,14,True,True,45.5591843600994,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1018.3023104253128,5958229.5449829325
+1200333,40,500,60,3,14,14,True,True,132.91808640446877,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",50.71382502449077,438981.10000536573
+1200334,40,500,61,2,14,14,True,True,69.76569697251905,True,True,False,False,separation,,22.577869792204055,203199.2392636229
+1200335,40,500,53,1,14,14,True,True,147.1190423830205,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",43.92158453101406,474610.0830869856
+1200336,40,500,54,2,14,14,True,True,118.28236286161982,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",88.39387421655232,893009.4313295982
+1200337,40,500,54,1,14,14,True,True,160.82675902627628,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",18.440764333266557,210329.2759481274
+1200338,40,500,57,1,14,14,True,True,133.11548170459608,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",36.10105144585949,1411130.5521713188
+1200339,40,500,50,1,14,14,True,True,167.00514668408545,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",23.94243020421987,232348.1368662743
+1200340,40,500,51,2,14,14,True,True,80.62029954860208,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",95.48524892940887,226820.94885517991
+1200341,40,500,45,2,14,14,True,True,96.58407460583227,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",108.74070710532419,256743.64253912427
+1200342,40,500,58,1,14,14,True,True,103.46329208151396,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",25.95832702487587,306443.475653134
+1200343,40,500,60,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200344,40,500,42,3,14,14,True,True,57.62312111630936,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",510.9053284241237,829141.3928781801
+1200345,40,500,61,2,14,14,True,True,126.63259967121955,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",59.93965036439096,1065672.060867225
+1200346,40,500,51,2,14,14,True,True,77.56834282160952,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",68.89197797447498,309202.8167883187
+1200347,40,500,40,1,14,14,True,True,90.210909892964,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",94.87655283271827,346228.05388188234
+1200348,40,500,51,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200349,40,500,59,3,14,14,True,True,56.58873384932764,True,True,False,False,separation,,25.387114470907022,320713.3736612055
+1200350,40,500,68,1,14,14,True,True,122.29494973527767,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",323.5799658947378,676370.8355897672
+1200351,40,500,51,3,14,14,True,True,106.8311343719853,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",65.69323743728016,445386.96580583096
+1200352,40,500,52,2,14,14,True,True,86.95230746234219,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",97.51735231805722,500581.7771128361
+1200353,40,500,65,2,14,14,True,True,131.41075495813462,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",79.16291231383975,1519023.2010544518
+1200354,40,500,62,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200355,40,500,57,1,14,14,True,True,175.44787563536752,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",18.455761762778515,353650.323709301
+1200356,40,500,58,2,14,14,True,True,124.17533067215756,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",51.41418817303665,592231.2137082756
+1200357,40,500,63,1,14,14,True,True,181.70690191187447,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",37.45389647303089,206337.57270941164
+1200358,40,500,47,1,14,14,True,True,75.93114439698365,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",85.60698050826379,1171580.5930791048
+1200359,40,500,54,3,14,14,True,True,84.8593546289601,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",168.59934611044497,351154.6887870458
+1200360,40,500,56,5,14,14,True,True,64.42621586888929,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",298.237451190649,434841.5311755759
+1200361,40,500,54,1,14,14,True,True,112.1936286842139,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",74.7045593374051,272999.1554497867
+1200362,40,500,55,1,14,14,True,True,124.35876564053791,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",148.0670345766523,1708173.3950090734
+1200363,40,500,53,4,14,14,True,True,29.36137067560731,True,True,False,False,separation,,22.90467088307169,288182.7330646288
+1200364,40,500,46,3,14,14,True,True,69.8292639085397,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",166.1179205774391,1166367.4067304106
+1200365,40,500,55,3,14,14,True,True,73.67496162232666,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",195.80977359414337,1084900.102164069
+1200366,40,500,65,4,14,14,True,True,76.69416808424798,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1593.795843802161,1828162.8723736387
+1200367,40,500,58,4,14,14,True,True,103.22296554837658,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",107.10400620240856,254946.68882480473
+1200368,40,500,58,2,14,14,True,True,175.2945888636737,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",96.26458767358403,1055449.7408697684
+1200369,40,500,51,2,14,14,True,True,168.079891132156,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",34.96236658854472,3792026.7461242382
+1200370,40,500,55,1,14,14,True,True,101.23454341432782,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",51.29227819063246,276900.52068996185
+1200371,40,500,57,6,14,14,True,True,29.939165935752314,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",1749.8138258885751,1471125.9617998502
+1200372,40,500,69,6,14,14,True,True,38.53047868107567,True,True,False,False,separation,,178.57062130254445,1283143.948502835
+1200373,40,500,51,2,14,14,True,True,87.4628780209635,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",95.76779420500114,292943.1551348068
+1200374,40,500,56,1,14,14,True,True,154.94763961520897,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",34.638160888120936,390409.34674848855
+1200375,40,500,66,5,14,14,True,True,12.02604390929729,True,True,False,False,separation,,21.070457146294117,47634.92302439238
+1200376,40,500,49,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200377,40,500,54,5,14,14,True,True,31.951871032207634,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",2112.428184185365,17518506.81048382
+1200378,40,500,49,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200379,40,500,50,1,14,14,True,True,146.6530724446559,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",29.14801388029386,395985.16765848827
+1200380,40,500,60,1,14,14,True,True,157.848519113273,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",60.288846303071786,629549.7135967242
+1200381,40,500,63,1,14,14,True,True,158.91978951757335,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",43.310985405660745,263201.79116198816
+1200382,40,500,49,2,14,14,True,True,88.3187715126428,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",88.05058717813367,1136992.1653366429
+1200383,40,500,52,3,14,14,True,True,72.97742947152996,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",836.4538728007608,2399496.4588159868
+1200384,40,500,62,4,14,14,True,True,95.3318539433053,True,True,False,False,separation,overflow encountered in exp,2588603241990540.0,46247765.46723281
+1200385,40,500,48,5,14,14,True,True,94.4636270814613,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",92.22721277015138,682245.3416332852
+1200386,40,500,39,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200387,40,500,45,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200388,40,500,58,2,14,14,True,True,122.66937189848709,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",63.190035650768905,194311.6765496551
+1200389,40,500,57,2,14,14,True,True,165.43523498825473,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",73.96314841336181,615574.9083365942
+1200390,40,500,69,3,14,14,True,True,13.000000000000002,True,True,False,False,separation,,22.754470286976908,15735.907434342927
+1200391,40,500,48,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200392,40,500,48,2,14,14,True,True,89.42560735261165,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",53.22017025406041,431025.9238038941
+1200393,40,500,54,3,14,14,True,True,30.437166636606257,True,True,False,False,separation,,138.1298118697913,1239857.4099627621
+1200394,40,500,58,2,14,14,True,True,147.0590842076657,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",39.21239180024249,129340.74632276442
+1200395,40,500,54,2,14,14,True,True,80.9339128875423,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",414.6952251658872,1903106.5802204784
+1200396,40,500,58,3,14,14,True,True,47.7910053002699,True,True,False,False,separation,,21.92908961962646,71812.5999916763
+1200397,40,500,55,6,14,14,True,True,25.454416830170224,True,True,False,False,separation,,42.95561673970495,199023.7898412048
+1200398,40,500,49,2,14,14,True,True,126.73636702009964,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",135.57747874390918,491775.93869586976
+1200399,40,500,61,3,14,14,True,True,49.23931780740793,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",193.78552625174052,1500709.5471905635
+1200400,40,500,60,6,14,14,True,False,-0.0,True,True,False,True,valid,,3.56194763333297,4.683880363242049
+1200401,40,500,56,2,14,14,True,True,60.825154425694066,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",261.14132331824794,488161.6074581765
+1200402,40,500,46,2,14,14,True,True,81.67963517047177,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",388.1708416971177,505517.7281965667
+1200403,40,500,47,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200404,40,500,58,4,14,14,True,True,81.43529892258185,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",259.12595260127307,2870241.545925973
+1200405,40,500,50,2,14,14,True,True,52.91553368137237,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",506.7590262434778,1332073.707272232
+1200406,40,500,55,3,14,14,True,True,69.74925701111249,True,True,False,False,separation,,42.687864616242265,835903.6399404792
+1200407,40,500,57,1,14,14,True,True,140.83157425783,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",140.08790849168605,1710729.4970108022
+1200408,40,500,48,6,14,14,True,True,67.32142011792351,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",245.13559671871113,1234045.5659264415
+1200409,40,500,62,1,14,14,True,True,127.7450276540685,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",98.3982457003468,263197.76347346493
+1200410,40,500,54,2,14,14,True,True,105.71036244453008,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",136.4272393124979,774616.2863184473
+1200411,40,500,56,2,14,14,True,True,136.98787978087196,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",245.58356192196098,4724541.473528223
+1200412,40,500,55,2,14,14,True,True,102.91245767218399,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",54.66264242598479,479571.81757569703
+1200413,40,500,64,2,14,14,True,True,147.57480199993887,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",104.33317231553124,1899529.682241111
+1200414,40,500,52,2,14,14,True,True,101.26392083068738,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",165.66060054776364,315238.25762883754
+1200415,40,500,66,2,14,14,True,True,136.5223641298764,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",351.63684923854805,2601031.054951889
+1200416,40,500,60,6,14,14,True,True,55.85484805646889,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",2828.718367274957,39028617.76814281
+1200417,40,500,55,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200418,40,500,58,1,14,14,True,True,174.19443686720334,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",51.354863875138705,462446.82714804244
+1200419,40,500,60,1,14,14,True,True,161.49994185570276,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",88.27316650906705,538016.2499633441
+1200420,40,500,49,1,14,14,True,True,140.31218914797103,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",131.15003979844352,294392.9436035049
+1200421,40,500,56,2,14,14,True,True,105.22492566661639,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",133.97537001200547,470275.5623574521
+1200422,40,500,55,1,14,14,True,True,161.99665964112492,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",27.073161378281963,189868.37067125193
+1200423,40,500,47,1,14,14,True,True,109.22041899279677,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",25.500394019949194,226525.2770989557
+1200424,40,500,64,4,14,14,True,True,23.12571199311748,True,True,False,False,separation,overflow encountered in exp,368.5819999188032,365821.2306871332
+1200425,40,500,59,3,14,14,True,True,40.30241598089617,True,True,False,False,separation,,19.598490037006698,63565.29883233892
+1200426,40,500,54,2,14,14,True,True,82.6939978112426,True,True,False,False,separation,,27.880576099740384,126730.22771371546
+1200427,40,500,66,2,14,14,True,True,54.57631936441783,True,True,False,False,separation,overflow encountered in exp,4078876323848493.0,43400102.93678701
+1200428,40,500,51,1,14,14,True,True,84.39051296328704,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",48.380630578497694,566185.4338640115
+1200429,40,500,54,1,14,14,True,True,145.40117990914985,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",50.33178343670612,835745.548033058
+1200430,40,500,45,1,14,14,True,True,113.00543659333657,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",138.1023144094535,271403.7355276882
+1200431,40,500,53,2,14,13,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200432,40,500,62,2,14,14,True,True,127.83206329742019,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",265.6497252320648,2465284.5585308843
+1200433,40,500,59,5,14,14,True,True,66.72481202182922,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",197.44625873983358,460089.1315472928
+1200434,40,500,54,5,14,14,True,True,44.79057823508344,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",97.18782052074619,169911.14074122798
+1200435,40,500,50,2,14,14,True,True,56.9747840286161,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",313.27928075396113,2887499.5003492
+1200436,40,500,65,1,14,14,True,True,169.7049959790189,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",73.22515306710712,359440.9277136875
+1200437,40,500,42,2,14,14,True,True,108.57240577212059,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",120.61203602214707,716168.7583619474
+1200438,40,500,51,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200439,40,500,47,1,14,14,True,True,101.34719571474054,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",51.41820543440216,391320.0381129155
+1200440,40,500,50,3,14,14,True,True,79.96261722078881,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",273.5542647348999,1164298.5108651812
+1200441,40,500,55,1,14,14,True,True,147.17743105767147,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",23.929969137572762,330780.5521905003
+1200442,40,500,55,2,14,14,True,True,124.65510192140654,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",64.68307739390046,1570229.7020278785
+1200443,40,500,55,3,14,14,True,True,66.93082748477407,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",2096.453157353827,62885697.272431545
+1200444,40,500,58,1,14,14,True,True,166.8212500557391,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",61.25060083307857,494315.71674044424
+1200445,40,500,54,1,14,14,True,True,140.5885274967473,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",28.230935917570626,318202.17021105735
+1200446,40,500,52,1,14,14,True,True,118.72390084781935,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",187.04535401292884,8759033.595681185
+1200447,40,500,41,6,14,14,True,True,64.80429041244463,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",174.7407160048646,517818.1273758439
+1200448,40,500,51,4,14,14,True,True,19.312536578702513,True,True,False,False,separation,,23.143174646185912,59381.058597756
+1200449,40,500,47,2,14,14,True,True,56.85703477115588,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",217.21617249229536,796767.4530825982
+1200450,40,500,61,3,14,14,True,True,116.06637867874896,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",143.6675604925059,1020875.7445933535
+1200451,40,500,71,5,14,14,True,True,18.0,True,True,False,False,separation,,53.06427226693981,16831.209234896756
+1200452,40,500,56,2,14,14,True,True,92.52306183523238,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",230.2671428745257,658542.3425021091
+1200453,40,500,53,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200454,40,500,63,1,14,14,True,True,165.67224775559373,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",48.77903118837385,739665.4918262685
+1200455,40,500,54,3,14,14,True,True,105.74162975658017,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",586.7559057162995,2014839.1419553133
+1200456,40,500,52,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200457,40,500,61,3,14,14,True,True,179.78228547570555,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",58.36129436376347,667357.2588506445
+1200458,40,500,74,5,14,14,True,True,47.94827561340114,True,True,False,False,separation,,37.188649606128706,162600.54081058726
+1200459,40,500,46,1,14,14,True,True,113.94987478509954,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",81.10084807622565,325524.2255089046
+1200460,40,500,56,2,14,14,True,True,95.13702737556726,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",146.9313736321697,277847.0280424737
+1200461,40,500,56,2,14,14,True,True,122.93602022024206,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",293.08423987695176,650424.8311350645
+1200462,40,500,52,1,14,14,True,True,192.61624644372773,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",41.522481729869966,209270.8310183377
+1200463,40,500,48,4,14,14,True,True,91.3977553531549,True,True,False,False,separation,overflow encountered in exp,5933161340092320.0,106959203.46200044
+1200464,40,500,52,1,14,14,True,True,120.88825964157121,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",40.72776976798098,434886.4008068196
+1200465,40,500,60,4,14,14,True,True,40.281162025142365,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",2413.26330555354,7239872.923257266
+1200466,40,500,53,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200467,40,500,59,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200468,40,500,46,4,14,14,True,True,20.622536654206126,True,True,False,False,separation,,35.29685664506258,482773.9379882977
+1200469,40,500,64,6,14,14,True,True,33.07018557178683,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",5851.768358139635,4362408.053214996
+1200470,40,500,64,3,14,14,True,True,27.682296527322706,True,True,False,False,separation,,21.73962098828733,99087.58592299817
+1200471,40,500,50,3,14,14,True,True,41.24814562098378,True,True,False,False,separation,,22.47976933345359,101513.56466945197
+1200472,40,500,55,1,14,14,True,True,150.75714710263804,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",23.329882530788375,233031.79547070598
+1200473,40,500,48,1,14,14,True,True,152.7143482897245,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",42.86149940267318,149415.53454048882
+1200474,40,500,67,3,14,14,True,True,77.05167827508755,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",774.6683182007072,1742705.916507841
+1200475,40,500,58,1,14,14,True,True,93.59615252694891,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",69.65404137764558,538379.9460894977
+1200476,40,500,47,2,14,14,True,True,116.29903048630196,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",208.45987503048457,1226433.9472544927
+1200477,40,500,55,2,14,14,True,True,113.61646418198389,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",121.23519969584834,940494.34091642
+1200478,40,500,48,3,14,14,True,True,69.48488917141599,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",87.35683513292142,225690.7969131853
+1200479,40,500,58,2,14,14,True,True,106.10113382269556,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",134.00037373972998,1284498.011128861
+1200480,40,500,52,1,14,14,True,True,168.57696396140855,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",64.59228029530288,383465.6722613762
+1200481,40,500,52,3,14,14,True,True,26.12100192335251,True,True,False,False,separation,,24.34713659927592,39515.270478326864
+1200482,40,500,52,2,14,14,True,True,147.70725806400213,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",98.23877152931858,829374.5787328158
+1200483,40,500,57,4,14,14,True,True,38.458420670727726,True,True,False,False,separation,,95.42084598397197,318680.9545093106
+1200484,40,500,58,3,14,14,True,True,24.935842132695644,True,True,False,False,separation,,121.41810207389777,542702.3864670402
+1200485,40,500,60,2,14,14,True,True,163.42672665492785,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",55.85488746043124,260457.60627425485
+1200486,40,500,51,2,14,14,True,True,124.60079660065608,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",43.3226536308022,341556.1495648235
+1200487,40,500,49,1,14,14,True,True,115.25134630734159,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",264.8065705944203,847341.1891447618
+1200488,40,500,60,1,14,14,True,True,151.64598697186017,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",32.645410995775066,127950.95845739587
+1200489,40,500,61,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200490,40,500,55,1,14,14,True,True,175.09173437906924,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",51.50056278848919,272984.8719678867
+1200491,40,500,48,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200492,40,500,51,1,14,14,True,True,114.09509843020275,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",22.991390281740763,139823.29399053237
+1200493,40,500,63,2,14,14,True,True,161.11670393519168,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",146.75259227454092,273061.6160039071
+1200494,40,500,60,0,14,14,True,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200495,40,500,55,3,14,14,True,True,91.72392643255374,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",134.7974975266007,2656904.8668837287
+1200496,40,500,52,1,14,14,True,True,160.7802237591394,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",43.47477491138357,571208.3467381875
+1200497,40,500,58,2,14,14,True,True,132.92127886244316,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",287.24812089992736,569297.8061409128
+1200498,40,500,66,4,14,14,True,True,25.938451699160876,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified | overflow encountered in exp",12857.658459911607,27727270.59740395
+1200499,40,500,57,2,14,14,True,True,65.73817527183196,True,True,False,False,separation,"Perfect separation or prediction detected, parameter may not be identified",353.24828968006807,344059.0886425851
+1200000,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200001,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200002,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200003,60,500,17,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200004,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200005,60,500,8,1,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200006,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200007,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200008,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200009,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200010,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200011,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200012,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200013,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200014,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200015,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200016,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200017,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200018,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200019,60,500,14,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200020,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200021,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200022,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200023,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200024,60,500,10,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200025,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200026,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200027,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200028,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200029,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200030,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200031,60,500,14,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200032,60,500,8,1,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200033,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200034,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200035,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200036,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200037,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200038,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200039,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200040,60,500,3,1,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200041,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200042,60,500,11,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200043,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200044,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200045,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200046,60,500,14,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200047,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200048,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200049,60,500,10,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200050,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200051,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200052,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200053,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200054,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200055,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200056,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200057,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200058,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200059,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200060,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200061,60,500,15,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200062,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200063,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200064,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200065,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200066,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200067,60,500,11,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200068,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200069,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200070,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200071,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200072,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200073,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200074,60,500,14,1,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200075,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200076,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200077,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200078,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200079,60,500,14,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200080,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200081,60,500,10,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200082,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200083,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200084,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200085,60,500,7,1,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200086,60,500,13,1,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200087,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200088,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200089,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200090,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200091,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200092,60,500,13,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200093,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200094,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200095,60,500,2,0,14,2,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200096,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200097,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200098,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200099,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200100,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200101,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200102,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200103,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200104,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200105,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200106,60,500,11,1,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200107,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200108,60,500,9,1,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200109,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200110,60,500,11,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200111,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200112,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200113,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200114,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200115,60,500,16,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200116,60,500,14,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200117,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200118,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200119,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200120,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200121,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200122,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200123,60,500,10,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200124,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200125,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200126,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200127,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200128,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200129,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200130,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200131,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200132,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200133,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200134,60,500,14,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200135,60,500,11,1,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200136,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200137,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200138,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200139,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200140,60,500,11,1,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200141,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200142,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200143,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200144,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200145,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200146,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200147,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200148,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200149,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200150,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200151,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200152,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200153,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200154,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200155,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200156,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200157,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200158,60,500,17,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200159,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200160,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200161,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200162,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200163,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200164,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200165,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200166,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200167,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200168,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200169,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200170,60,500,16,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200171,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200172,60,500,22,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200173,60,500,10,1,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200174,60,500,15,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200175,60,500,12,1,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200176,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200177,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200178,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200179,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200180,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200181,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200182,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200183,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200184,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200185,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200186,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200187,60,500,11,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200188,60,500,11,1,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200189,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200190,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200191,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200192,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200193,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200194,60,500,3,0,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200195,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200196,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200197,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200198,60,500,14,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200199,60,500,17,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200200,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200201,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200202,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200203,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200204,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200205,60,500,16,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200206,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200207,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200208,60,500,3,0,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200209,60,500,3,0,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200210,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200211,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200212,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200213,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200214,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200215,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200216,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200217,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200218,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200219,60,500,2,0,14,2,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200220,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200221,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200222,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200223,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200224,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200225,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200226,60,500,11,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200227,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200228,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200229,60,500,16,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200230,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200231,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200232,60,500,8,1,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200233,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200234,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200235,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200236,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200237,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200238,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200239,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200240,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200241,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200242,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200243,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200244,60,500,14,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200245,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200246,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200247,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200248,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200249,60,500,15,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200250,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200251,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200252,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200253,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200254,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200255,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200256,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200257,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200258,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200259,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200260,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200261,60,500,14,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200262,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200263,60,500,14,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200264,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200265,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200266,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200267,60,500,13,1,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200268,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200269,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200270,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200271,60,500,3,0,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200272,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200273,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200274,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200275,60,500,16,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200276,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200277,60,500,13,1,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200278,60,500,12,1,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200279,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200280,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200281,60,500,3,0,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200282,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200283,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200284,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200285,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200286,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200287,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200288,60,500,16,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200289,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200290,60,500,13,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200291,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200292,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200293,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200294,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200295,60,500,10,1,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200296,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200297,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200298,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200299,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200300,60,500,12,1,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200301,60,500,14,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200302,60,500,14,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200303,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200304,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200305,60,500,5,1,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200306,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200307,60,500,11,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200308,60,500,9,1,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200309,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200310,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200311,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200312,60,500,4,1,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200313,60,500,13,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200314,60,500,14,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200315,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200316,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200317,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200318,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200319,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200320,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200321,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200322,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200323,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200324,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200325,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200326,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200327,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200328,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200329,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200330,60,500,14,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200331,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200332,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200333,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200334,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200335,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200336,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200337,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200338,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200339,60,500,10,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200340,60,500,18,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200341,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200342,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200343,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200344,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200345,60,500,15,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200346,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200347,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200348,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200349,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200350,60,500,16,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200351,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200352,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200353,60,500,15,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200354,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200355,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200356,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200357,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200358,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200359,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200360,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200361,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200362,60,500,10,1,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200363,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200364,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200365,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200366,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200367,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200368,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200369,60,500,13,1,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200370,60,500,7,1,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200371,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200372,60,500,14,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200373,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200374,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200375,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200376,60,500,10,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200377,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200378,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200379,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200380,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200381,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200382,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200383,60,500,10,1,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200384,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200385,60,500,6,1,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200386,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200387,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200388,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200389,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200390,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200391,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200392,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200393,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200394,60,500,11,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200395,60,500,14,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200396,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200397,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200398,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200399,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200400,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200401,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200402,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200403,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200404,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200405,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200406,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200407,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200408,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200409,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200410,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200411,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200412,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200413,60,500,13,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200414,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200415,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200416,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200417,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200418,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200419,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200420,60,500,16,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200421,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200422,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200423,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200424,60,500,14,1,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200425,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200426,60,500,14,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200427,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200428,60,500,9,1,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200429,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200430,60,500,15,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200431,60,500,12,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200432,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200433,60,500,9,1,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200434,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200435,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200436,60,500,15,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200437,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200438,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200439,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200440,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200441,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200442,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200443,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200444,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200445,60,500,17,1,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200446,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200447,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200448,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200449,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200450,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200451,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200452,60,500,15,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200453,60,500,13,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200454,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200455,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200456,60,500,13,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200457,60,500,11,1,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200458,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200459,60,500,12,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200460,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200461,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200462,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200463,60,500,3,0,14,3,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200464,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200465,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200466,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200467,60,500,17,0,14,14,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200468,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200469,60,500,13,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200470,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200471,60,500,15,0,14,13,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200472,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200473,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200474,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200475,60,500,8,0,14,8,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200476,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200477,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200478,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200479,60,500,14,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200480,60,500,4,0,14,4,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200481,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200482,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200483,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200484,60,500,7,0,14,7,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200485,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200486,60,500,12,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200487,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200488,60,500,16,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200489,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200490,60,500,5,0,14,5,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200491,60,500,12,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200492,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200493,60,500,15,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200494,60,500,9,0,14,9,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200495,60,500,11,0,14,11,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200496,60,500,6,0,14,6,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200497,60,500,12,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200498,60,500,17,0,14,12,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,
+1200499,60,500,10,0,14,10,False,,,False,False,False,False,rank_deficient_or_single_outcome_class,,,

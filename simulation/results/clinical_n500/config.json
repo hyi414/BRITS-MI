@@ -1,0 +1,25 @@
+{
+  "experiment": "clinical association simulation",
+  "n_subjects": 500,
+  "n_runs_per_missingness_level": 200,
+  "missingness_levels": [
+    0.2,
+    0.4,
+    0.6
+  ],
+  "scenario": "baseline_harder",
+  "brits_mi_imputations": 50,
+  "mice": "R mice package defaults with m=50 and maxit=5",
+  "missforest": "Five independently seeded R missForest package-default completions (maxiter=10, ntree=100, mtry=floor(sqrt(p))) with downstream refitting and Rubin pooling",
+  "predictor_preselection": "none for package-default MICE or Missforest",
+  "replicate_construction": "BRITS-MI, MICE, and simple baselines combine two independent 100-run batches; five-draw Missforest was rerun on the same 200 seeds",
+  "complete_case_estimability": "Effect summaries require n_used >= 10 times the number of reported terms, finite estimates and standard errors, max absolute estimate <= 10, and max standard error <= 10; exclusions are audited separately",
+  "methods": [
+    "BRITS-MI",
+    "MICE",
+    "Missforest",
+    "Mean imputation",
+    "Complete case",
+    "Full data"
+  ]
+}
