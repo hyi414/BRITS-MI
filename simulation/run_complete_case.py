@@ -12,8 +12,7 @@ import pandas as pd
 from scipy.optimize import linprog
 import statsmodels.api as sm
 
-ARCHIVE = (Path(__file__).resolve().parents[1] / "reproducibility" /
-           "reported_pipeline" / "association" / "scripts")
+ARCHIVE = Path(__file__).resolve().parent / "clinical" / "scripts"
 sys.path.insert(0, str(ARCHIVE))
 import run_package_default_association_comparators as association  # noqa: E402
 

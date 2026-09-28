@@ -1,0 +1,203 @@
+{
+  "description": "Code-only extraction; source hashes precede import-namespace adjustments and formatting. No source datasets or fitted objects are included.",
+  "symbols": [
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_effect_recovery.py",
+      "symbol": "MARKERS",
+      "sha256": "995631d497846bb55b5e7ce819ac54d5259c2ff27f27837b8c0f2a9c34702098"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_effect_recovery.py",
+      "symbol": "DISPLAY_TERMS",
+      "sha256": "2d340c75b2e9aef7b7d3b9a5a0398df8b24890f49ef4e17b8ad887b557320a43"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_effect_recovery.py",
+      "symbol": "TERM_LABELS",
+      "sha256": "1e1f0d49a9649fc8424605d65607b772986007b7816b84578b7728cf46d708bd"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_effect_recovery.py",
+      "symbol": "_yes",
+      "sha256": "6c75e64c10f7babbf7e49dc5de8519a3bd669c179b6d85cfb1003a075d1c5b04"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_effect_recovery.py",
+      "symbol": "_male",
+      "sha256": "e8b0b07f94cbee52625baa73cdf79131806e0ba4ca98c8de034155f9c841ebfd"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_effect_recovery.py",
+      "symbol": "_fit_logit",
+      "sha256": "f2aee5b15da476072bcd90510f60bb89fd1ae341742c8a5a5d9346c4e6af7248"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_world_brits_benchmark.py",
+      "symbol": "balanced_accuracy_score_manual",
+      "sha256": "52fb235c02a505b593db671fcb7a5a22a70059eb33d72e8d798ebf874e8e1ab4"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_world_brits_benchmark.py",
+      "symbol": "macro_ovr_auc",
+      "sha256": "1caf21a91c1255ec2e4540cf2748448ee8cd8049bcf42fd0ba757f1a466c079e"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_world_brits_benchmark.py",
+      "symbol": "macro_auprc",
+      "sha256": "089c8916986b33cb4596fc22ad081a845fd636cb0379abcab67941c4fe96b80c"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_world_brits_benchmark.py",
+      "symbol": "summarize_sequence_features",
+      "sha256": "ab56716841a8e01160aaa08f7fc83a8223eb560ab5ee665d542a7e4caa55eec7"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_world_brits_benchmark.py",
+      "symbol": "downstream_features",
+      "sha256": "dc08b5c4a3915746ebdde7edf381c6302dd38eb120d87d8e50168bcc6c8cfd35"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_world_brits_benchmark.py",
+      "symbol": "fit_downstream_classifier",
+      "sha256": "cfb7456282397cf5a73cbd6e5eebeedfa80c15e5356779359751b8f760799696"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_masking_grid.py",
+      "symbol": "_hide_observed_cells",
+      "sha256": "e0be560a363f95d2f3fbbbddb22b9e98fd33c9ada8274c349f0489d4ec6c8081"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_data_masking_grid.py",
+      "symbol": "_masked_metrics",
+      "sha256": "549c006cdc7c5002ff9a42d6ed3930cc95eb87a0113cb048540913f088e4357c"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_masking_apparent_trajectory.py",
+      "symbol": "observed_summary_features",
+      "sha256": "c5c430b9361d4efae050a7eb21967c7683d69a0f61f317199d80546df57dd8c5"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_real_masking_apparent_trajectory.py",
+      "symbol": "trajectory_summary_metrics",
+      "sha256": "732c8e696627dbdccc6dba787dde5f48d7bcbca9e000f0471211caf850f8da0c"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "observed_trajectory_summary",
+      "sha256": "174d84c8cb54a7dd41e51ae84195556c0094c0da5c266a429ade067c235b588e"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "effect_design_observed",
+      "sha256": "bb62cfe3deaf429b248b4e1b7360b759f9bb03060ae84a281c0a8e54fe7fcbb7"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "reference_coefficients",
+      "sha256": "4fcb0f8d087acbc8ef406a2f8c4013fa739b7d5bbdfad5cd052543b14eca99a6"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "pooled_effect_rows",
+      "sha256": "bac154e5541e10f6c669d5e549393901cc5d17af9ed60c05522898e47e0c679a"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "build_frame",
+      "sha256": "e1a5c8ff91ba45e35bfea0ebe6a59efca8689cb7b7dbec8dc0e1da5d9ff269ec"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "completed_array",
+      "sha256": "99dde0f6cdd1411eda953cd62a374e405b9f2815fe4870f37467581c8c35fe0d"
+    },
+    {
+      "module": "evaluation",
+      "source_file": "run_package_default_real_masking_comparators.py",
+      "symbol": "pooled_apparent_prediction",
+      "sha256": "ee22c77ae65666f4fbfe01c844b088fc9f5c2d7e0cf5d875df59df4b81f88d0d"
+    },
+    {
+      "module": "brits",
+      "source_file": "run_real_world_brits_history_benchmark.py",
+      "symbol": "RealBRITSHistory",
+      "sha256": "da9aa69dfe5f33bd756f3044ac3282ec60ea9366c2da8417c85082a036c80e26"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "BASE_TERMS",
+      "sha256": "2ef2170819abc8db9bf241e8ef89bd421126d55688397ab63ec4276f395d5ec7"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "TRAJECTORY_TERMS",
+      "sha256": "26e63692808347468e65e01e6b0dca7fab8030287617031b95e31571c301c0a3"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "reference_target",
+      "sha256": "48588418b2363285ea7b9ff4c4dae41c31e0819dd3caa59994efe4923f948d5f"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "differentiable_design",
+      "sha256": "57b9c68618edba507715db76662baeabb3d9c69abf351e8b0ab5493464806afd"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "draw_training_hide",
+      "sha256": "4139db1b717c59aff33e4a7e2defb17de8e9c9aa6573556ad828eac044bd9848"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "train_model",
+      "sha256": "042ec0884c987d36a5e9243c776859bc221e60c1a4005bd8f04e807e4d24dbdc"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "predict_completed",
+      "sha256": "b1c797479708164e7ec3737931c0d70b1ade6ffa0ff20d3b9170c59be845af98"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "residual_bank",
+      "sha256": "be07c7d4c94b21f10fa8787e8483553cc0c22ba83374f6abec0275f8f2829a51"
+    },
+    {
+      "module": "brits",
+      "source_file": "test_real_brits_target_alignment.py",
+      "symbol": "stochastic_draws",
+      "sha256": "d91d1316d74f9e3e665e0a17c09fb53fecf6e29a866ff0378eed3ede8eaec6b5"
+    }
+  ]
+}

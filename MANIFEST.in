@@ -7,7 +7,11 @@ recursive-include configs *.json *.csv
 recursive-include results *.csv
 recursive-include docs *.md
 recursive-include examples *.py
-recursive-include reproducibility *.R *.md *.json *.csv *.py
+recursive-include reproducibility *.md *.json *.csv *.py
 recursive-include scripts *.py
 recursive-include tests *.py
 recursive-include simulation *.py *.md *.csv *.json *.png *.pdf *.svg
+recursive-include simulation *.R
+include validation/*.py
+include validation/README.md
+include validation/source_manifest.json

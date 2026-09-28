@@ -9,7 +9,18 @@
 | Rubin pooling and recovery metrics | `src/brits_mi/analysis.py` |
 | Ultrasound-like renderer and 17 image summaries | `src/brits_mi/ultrasound.py` |
 | Simulation grid and machine-readable manifest | `src/brits_mi/runner.py` |
-| Package-default R comparators | `reproducibility/R/default_comparators.R` |
+| Package-default R comparators | `simulation/R/default_comparators.R` |
+| Manuscript clinical comparison launcher | `simulation/run_simulation.py` |
+| Clinical benchmark implementation and dependencies | `simulation/clinical/scripts/` |
+| Historical image comparison runner | `simulation/image/scripts/run_fast_image_fusion_nsim500.py` |
+| Real-data masking code, without the cohort | `validation/run_validation.py` and `validation/README.md` |
+
+The simulation scripts were consolidated under `simulation/`. Their source
+hashes remain recorded in `reproducibility/source_manifest.json`, with updated
+destinations. The date-stamped release inventory records the original release
+paths and has not been rewritten. The former
+`reproducibility/run_reported_clinical.py` command remains a compatibility entry
+point. Reusable library code stays under `src/`.
 
 ## Locked experiment descriptions
 

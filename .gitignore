@@ -19,3 +19,23 @@ restricted_data/
 *.key
 *.pem
 .env
+# Private validation inputs and generated patient-level artifacts.
+/validation/data/
+/validation/input/
+/validation/outputs/
+/validation/results/
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.joblib
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.rds
+*.RData
+*.xls
+*.xlsm
+*.sav
+*.dta

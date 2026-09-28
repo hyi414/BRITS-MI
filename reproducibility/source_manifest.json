@@ -1,67 +1,67 @@
 [
   {
     "source": "scripts/run_fast_image_fusion_nsim500.py",
-    "destination": "reproducibility/reported_pipeline/image_prototype/scripts/run_fast_image_fusion_nsim500.py",
+    "destination": "simulation/image/scripts/run_fast_image_fusion_nsim500.py",
     "sha256": "d2740e47c01de67174d1d6d70f784fe08b10040ace383e20307ebcd14d0e87e0"
   },
   {
     "source": "scripts/package_default_imputation.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/package_default_imputation.py",
+    "destination": "simulation/clinical/scripts/package_default_imputation.py",
     "sha256": "021a0d8f3520398f8ca2fe77529565af22e783d1faf9d2f7ea8281f8ea5a3050"
   },
   {
     "source": "scripts/run_package_default_imputer.R",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_package_default_imputer.R",
+    "destination": "simulation/clinical/scripts/run_package_default_imputer.R",
     "sha256": "ab8c78d7a84abb586a5fcdaee0c869e5c5691f16239f9d0deaf959936bc02759"
   },
   {
     "source": "scripts/run_gm_mi_dgp1_grid.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_gm_mi_dgp1_grid.py",
+    "destination": "simulation/clinical/scripts/run_gm_mi_dgp1_grid.py",
     "sha256": "772062ea08b3b455f184de230c34c6a66419eb2ced30cd62e961b8e825fbccd4"
   },
   {
     "source": "scripts/run_irregular_predictor_trajectory_sim.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_irregular_predictor_trajectory_sim.py",
+    "destination": "simulation/clinical/scripts/run_irregular_predictor_trajectory_sim.py",
     "sha256": "b5a6c43b2563f05ac2b684dfa6527b586ac300dc9f59b20c9695ac2b82b8b92e"
   },
   {
     "source": "scripts/run_trajectory_history_imputation_sim.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_trajectory_history_imputation_sim.py",
+    "destination": "simulation/clinical/scripts/run_trajectory_history_imputation_sim.py",
     "sha256": "4206ff383da9a0b2ef80712a4196940266920a7360d0b49391b813aa2de30a85"
   },
   {
     "source": "scripts/run_outcome_aware_coefficient_sim.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_outcome_aware_coefficient_sim.py",
+    "destination": "simulation/clinical/scripts/run_outcome_aware_coefficient_sim.py",
     "sha256": "63a48517281eb17ee307764d4d8a846afb011a2c39461a2bc466f39695603c15"
   },
   {
     "source": "scripts/test_anchored_brits_mi_blend.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/test_anchored_brits_mi_blend.py",
+    "destination": "simulation/clinical/scripts/test_anchored_brits_mi_blend.py",
     "sha256": "6f62690fc991a6cd491b6363cdd894164d319eda8815e058234ed7ffb2dfde11"
   },
   {
     "source": "scripts/run_neural_brits_mi_downstream_gradient.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_neural_brits_mi_downstream_gradient.py",
+    "destination": "simulation/clinical/scripts/run_neural_brits_mi_downstream_gradient.py",
     "sha256": "b7b328f861fc3e1b1cbaf167c85dcb80d42860efea55ec728605fe4f3a3a396d"
   },
   {
     "source": "scripts/run_effect_recovery_harder_irregularity_test.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_effect_recovery_harder_irregularity_test.py",
+    "destination": "simulation/clinical/scripts/run_effect_recovery_harder_irregularity_test.py",
     "sha256": "a10eb3248f27ede3d8c851e46b46446e645377fa1fdb275b4208107777ffba4d"
   },
   {
     "source": "scripts/run_large_adaptive_effect_recovery.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_large_adaptive_effect_recovery.py",
+    "destination": "simulation/clinical/scripts/run_large_adaptive_effect_recovery.py",
     "sha256": "aae2981a3eb1f233bb9ff4e32c05366ddf02950c59a96e58d27744488d3b92c2"
   },
   {
     "source": "scripts/test_posterior_vc_smc_brits.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/test_posterior_vc_smc_brits.py",
+    "destination": "simulation/clinical/scripts/test_posterior_vc_smc_brits.py",
     "sha256": "1713457fa6948f6ebb440ecc913d7c0e1f3e59f3c36ce8b15615b0e4e56e3ce5"
   },
   {
     "source": "scripts/run_refined_brits_mi_association.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_refined_brits_mi_association.py",
+    "destination": "simulation/clinical/scripts/run_refined_brits_mi_association.py",
     "sha256": "2f5d599ad513cc5cb6db57bc3c9b8999668d659cc6e431d25a9525dfc58a6b87"
   },
   {
@@ -136,102 +136,102 @@
   },
   {
     "source": "scripts/run_default_mice_clinical_association_sensitivity.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_default_mice_clinical_association_sensitivity.py",
+    "destination": "simulation/clinical/scripts/run_default_mice_clinical_association_sensitivity.py",
     "sha256": "0ad40c3cef9f9d4e2385273d6d5e5677282c74bd76ef559f0543934f2ab7749c"
   },
   {
     "source": "scripts/run_default_mice_association_one.R",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_default_mice_association_one.R",
+    "destination": "simulation/clinical/scripts/run_default_mice_association_one.R",
     "sha256": "c4b9dd1a3ed9bcec1ac6e1693c02524e7a9d51bcd37be0f24e44abafb59483c9"
   },
   {
     "source": "scripts/run_effect_recovery_harder_irregularity_test.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_effect_recovery_harder_irregularity_test.py",
+    "destination": "simulation/clinical/scripts/run_effect_recovery_harder_irregularity_test.py",
     "sha256": "a10eb3248f27ede3d8c851e46b46446e645377fa1fdb275b4208107777ffba4d"
   },
   {
     "source": "scripts/run_large_adaptive_effect_recovery.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_large_adaptive_effect_recovery.py",
+    "destination": "simulation/clinical/scripts/run_large_adaptive_effect_recovery.py",
     "sha256": "aae2981a3eb1f233bb9ff4e32c05366ddf02950c59a96e58d27744488d3b92c2"
   },
   {
     "source": "scripts/test_posterior_vc_smc_brits.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/test_posterior_vc_smc_brits.py",
+    "destination": "simulation/clinical/scripts/test_posterior_vc_smc_brits.py",
     "sha256": "1713457fa6948f6ebb440ecc913d7c0e1f3e59f3c36ce8b15615b0e4e56e3ce5"
   },
   {
     "source": "scripts/run_gm_mi_dgp1_grid.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_gm_mi_dgp1_grid.py",
+    "destination": "simulation/clinical/scripts/run_gm_mi_dgp1_grid.py",
     "sha256": "772062ea08b3b455f184de230c34c6a66419eb2ced30cd62e961b8e825fbccd4"
   },
   {
     "source": "scripts/run_irregular_predictor_trajectory_sim.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_irregular_predictor_trajectory_sim.py",
+    "destination": "simulation/clinical/scripts/run_irregular_predictor_trajectory_sim.py",
     "sha256": "b5a6c43b2563f05ac2b684dfa6527b586ac300dc9f59b20c9695ac2b82b8b92e"
   },
   {
     "source": "scripts/run_trajectory_history_imputation_sim.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_trajectory_history_imputation_sim.py",
+    "destination": "simulation/clinical/scripts/run_trajectory_history_imputation_sim.py",
     "sha256": "4206ff383da9a0b2ef80712a4196940266920a7360d0b49391b813aa2de30a85"
   },
   {
     "source": "scripts/run_outcome_aware_coefficient_sim.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_outcome_aware_coefficient_sim.py",
+    "destination": "simulation/clinical/scripts/run_outcome_aware_coefficient_sim.py",
     "sha256": "63a48517281eb17ee307764d4d8a846afb011a2c39461a2bc466f39695603c15"
   },
   {
     "source": "scripts/finalize_clinical_association_n2000_nsim100.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/finalize_clinical_association_n2000_nsim100.py",
+    "destination": "simulation/clinical/scripts/finalize_clinical_association_n2000_nsim100.py",
     "sha256": "ad85a80274f0c195d6e6a759f62b7615196a6c2e87bf3f704c175d0fd946b3f9"
   },
   {
     "source": "scripts/finalize_clinical_association_nsim200.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/finalize_clinical_association_nsim200.py",
+    "destination": "simulation/clinical/scripts/finalize_clinical_association_nsim200.py",
     "sha256": "94f2f79237f0b504deed6328dc1b4539e300b4d5ded804c1ecbde7da617df628"
   },
   {
     "source": "scripts/run_simple_clinical_association_baselines.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_simple_clinical_association_baselines.py",
+    "destination": "simulation/clinical/scripts/run_simple_clinical_association_baselines.py",
     "sha256": "b7c678071f424cf78b9531f37fe384fe4cdc78484a04955e9b6c4f973fac2018"
   },
   {
     "source": "scripts/run_package_default_association_comparators.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_package_default_association_comparators.py",
+    "destination": "simulation/clinical/scripts/run_package_default_association_comparators.py",
     "sha256": "ae122cc2c77250f79b10ed6b79ce99e7aa3bef9713e4339c6d7352392c01b87f"
   },
   {
     "source": "scripts/package_default_imputation.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/package_default_imputation.py",
+    "destination": "simulation/clinical/scripts/package_default_imputation.py",
     "sha256": "021a0d8f3520398f8ca2fe77529565af22e783d1faf9d2f7ea8281f8ea5a3050"
   },
   {
     "source": "scripts/run_package_default_imputer.R",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_package_default_imputer.R",
+    "destination": "simulation/clinical/scripts/run_package_default_imputer.R",
     "sha256": "ab8c78d7a84abb586a5fcdaee0c869e5c5691f16239f9d0deaf959936bc02759"
   },
   {
     "source": "scripts/run_missforest5_clinical_association.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_missforest5_clinical_association.py",
+    "destination": "simulation/clinical/scripts/run_missforest5_clinical_association.py",
     "sha256": "6ce7416d5640c42a5465dbe488136bfb56d9750fcf628eb4f360c9f37d7c4360"
   },
   {
     "source": "scripts/run_clinical_association_mnar_sensitivity.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_clinical_association_mnar_sensitivity.py",
+    "destination": "simulation/clinical/scripts/run_clinical_association_mnar_sensitivity.py",
     "sha256": "6bbf96f42ea82a657c0f08efc6590b8b9645b1040d0709adfe09c6c97062df1f"
   },
   {
     "source": "scripts/test_anchored_brits_mi_blend.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/test_anchored_brits_mi_blend.py",
+    "destination": "simulation/clinical/scripts/test_anchored_brits_mi_blend.py",
     "sha256": "6f62690fc991a6cd491b6363cdd894164d319eda8815e058234ed7ffb2dfde11"
   },
   {
     "source": "scripts/run_neural_brits_mi_downstream_gradient.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_neural_brits_mi_downstream_gradient.py",
+    "destination": "simulation/clinical/scripts/run_neural_brits_mi_downstream_gradient.py",
     "sha256": "b7b328f861fc3e1b1cbaf167c85dcb80d42860efea55ec728605fe4f3a3a396d"
   },
   {
     "source": "scripts/run_refined_brits_mi_association.py",
-    "destination": "reproducibility/reported_pipeline/association/scripts/run_refined_brits_mi_association.py",
+    "destination": "simulation/clinical/scripts/run_refined_brits_mi_association.py",
     "sha256": "2f5d599ad513cc5cb6db57bc3c9b8999668d659cc6e431d25a9525dfc58a6b87"
   }
 ]

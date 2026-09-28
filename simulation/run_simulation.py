@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = ROOT / "reproducibility/reported_pipeline/association/scripts"
+ARCHIVE = ROOT / "simulation/clinical/scripts"
 
 
 def commands(args):
@@ -36,7 +36,7 @@ def commands(args):
                 dest = str(out / f"{method}_missing{p}")
                 if method == "brits":
                     result.append([
-                        sys.executable, str(ROOT / "reproducibility/run_reported_clinical.py"),
+                        sys.executable, str(ROOT / "simulation/run_clinical.py"),
                         "--n", str(args.subjects), "--runs", str(args.runs), *seed,
                         "--missing-rate", rate, "--mean-weight", "0.20" if p == 60 else "0.10",
                         "--output", dest, "--execute",
