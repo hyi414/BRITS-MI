@@ -4,7 +4,7 @@ include CITATION.cff
 include CONTRIBUTING.md
 include DATA_POLICY.md
 recursive-include configs *.json *.csv
-recursive-include results *.csv
+recursive-include results *.csv *.md *.json *.pdf *.png *.html
 recursive-include docs *.md
 recursive-include examples *.py
 recursive-include reproducibility *.md *.json *.csv *.py
