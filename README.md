@@ -44,7 +44,7 @@ imputed trajectories. Optional `context` supplies additional subject-level
 features. Association imputations condition on an observed outcome.
 Use `task="prediction"` for label-free new-patient imputation and prediction.
 
-See the [clinical example](examples/run_clinical_association.py),
+See the [unified example](examples/unified_clinical.py),
 [input specification](docs/data_contract.md), and
 [methodology](docs/methodology.md). The unified recurrent implementation does
 not use a missForest mean anchor or a true-coefficient correction. Historical
@@ -75,7 +75,11 @@ probabilities = fusion.predict_proba(
 Image information enters both recurrent paths, current-cell predictions,
 and the fusion head. No test outcomes are required. The new benchmark uses
 a common refitted neural head and allows unlabeled test covariates in
-imputation to accommodate default missForest. See the
+imputation to accommodate default missForest. Image MICE and missForest use
+the same available clinical covariates and image descriptors, without an
+outcome column. BRITS-MI uses training labels only as supervised training
+targets. All methods receive 20 final classifier fits: single-imputation
+methods reuse their imputed data with the same 20 classifier seeds. See the
 [recurrent methodology](docs/methodology.md#recurrent-clinical-image-extension).
 The earlier tree-based `BRITSMIImage` remains available for archived results;
 it is not this recurrent implementation.
@@ -93,7 +97,7 @@ python simulation/unified/run_benchmark.py --kind clinical \
   --output results_local/clinical
 ```
 
-The command starts a run. Use `--kind image` for the recurrent fusion
+The command starts a run. Use `--kind image --seed-start 930000` for the recurrent fusion
 comparison. Outputs record source/configuration hashes, matched input hashes,
 valid and invalid fits, and completed counts. The
 [unified protocol](simulation/unified/README.md) separates development from
@@ -110,7 +114,7 @@ valid and invalid fits, and completed counts. The
 | `UnifiedBRITSMI.predict_proba(...)` | Mean class probability vectors across imputations |
 | Clinical simulation runner | Per-run coefficient estimates, bias, MSE, coverage, imputation RMSE, trajectory-summary RMSE, and aggregate summaries |
 | Image simulation runner | AUROC, AUPRC, classification loss, imputation error, and run configuration |
-| Real-data masking runner | Source-relative coefficient estimates and interval coverage, masked-cell and trajectory errors, apparent classification metrics, and training/comparator logs |
+| Real-data masking runner | Source-relative coefficient estimates and reference-interval inclusion, masked-cell and trajectory errors, apparent classification metrics, and training/comparator logs |
 
 Regression estimates use Rubin's pooling rules. For prediction from multiple
 imputed datasets, probability vectors are averaged before calculating
@@ -134,12 +138,28 @@ python simulation/unified/run_benchmark.py --kind real \
 
 Every imputer is fitted after masking. Its coefficient reference is the
 pre-mask model, not a known population parameter. Apparent classification is
-reported separately. The currently authorized older source contains 3,995 TE
-participants; 2,209 meet the prespecified longitudinal reference requirements.
-These are separate source and analysis denominators, not the manuscript's
-3,977-participant cohort. The 200-repeat results must be verified before use.
+reported separately. The current TE-only source contains 3,995 participants
+after excluding two MRE-coded records. This existing validation runner uses
+the 2,209-participant subset meeting longitudinal-reference requirements.
+It does not implement or establish results for the newer full-cohort,
+18-coefficient analysis specification. Source and analysis denominators must
+not be interchanged. Private validation data and outputs are not released.
 See `validation/unified_validation.py` and the
 [methodology](docs/methodology.md#comparators-and-real-data-masking).
+
+## Versioned Evidence
+
+The recurrent clinical evaluation completed 200 independent runs per setting.
+Its results and individual-coefficient diagnostics are available in the
+[aggregate results bundle](results/unified_recurrent_20261027/README.md).
+They do not establish uniform superiority over competing methods.
+
+Version `0.4.0` corrects the image comparison's outcome-information policy and
+equalizes the number of classifier fits. The previous 200-run image output is
+retained as an archived comparison, not relabeled as the corrected result.
+The conditional-mean recurrent engine is unchanged. The newer joint-likelihood
+posterior-sampling pilot remains a separate development method, not this release.
+See the [release specification](docs/release_040.md).
 
 ## Development
 

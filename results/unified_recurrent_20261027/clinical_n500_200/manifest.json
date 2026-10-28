@@ -1,0 +1,47 @@
+{
+  "kind": "clinical",
+  "runs": 200,
+  "n": 500,
+  "m": 20,
+  "missing_percentages": [
+    20,
+    40,
+    60
+  ],
+  "scenarios": [
+    "baseline_harder",
+    "mild_harder",
+    "strong_harder"
+  ],
+  "mechanism": "original",
+  "seed_start": 910000,
+  "config": {
+    "epochs": 120,
+    "patience": 25,
+    "hidden_size": 48,
+    "batch_size": 128,
+    "learning_rate": 0.002,
+    "holdout_fraction": 0.25,
+    "validation_fraction": 0.2,
+    "consistency_weight": 0.1,
+    "summary_weight": 0.2,
+    "downstream_weight": 0.2,
+    "residual_multiplier": 1.0,
+    "residual_mode": "correlated",
+    "bootstrap_members": 5,
+    "seed": 1
+  },
+  "source_sha256": "ddecb0e1246cd5b8710c172fe74ba561f07e07e8051187f4c850cda76f0aa712",
+  "pilot": false,
+  "input_sha256": null,
+  "runtime": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.2",
+    "statsmodels": "0.14.6",
+    "torch": "2.11.0",
+    "scikit-learn": "1.8.0",
+    "python": "3.14.0 (main, Oct  7 2025, 09:34:52) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "R": "R version 4.5.1 (2025-06-13)\nmice=3.18.0\nmissForest=1.5"
+  }
+}

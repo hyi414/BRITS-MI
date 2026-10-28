@@ -1,0 +1,38 @@
+{
+  "clinical_n500_200": {
+    "complete": true,
+    "jobs": 1800,
+    "runs_per_setting": 200,
+    "source_hash_verified": true,
+    "matched_method_inputs": true,
+    "all_13_terms_and_pooling_replayed": true,
+    "observed_cell_invariance": "covered by implementation tests; completed runs did not retain draws"
+  },
+  "clinical_n2000_200": {
+    "complete": true,
+    "jobs": 600,
+    "runs_per_setting": 200,
+    "source_hash_verified": true,
+    "matched_method_inputs": true,
+    "all_13_terms_and_pooling_replayed": true,
+    "observed_cell_invariance": "covered by implementation tests; completed runs did not retain draws"
+  },
+  "clinical_mar_200": {
+    "complete": true,
+    "jobs": 600,
+    "runs_per_setting": 200,
+    "source_hash_verified": true,
+    "matched_method_inputs": true,
+    "all_13_terms_and_pooling_replayed": true,
+    "observed_cell_invariance": "covered by implementation tests; completed runs did not retain draws"
+  },
+  "image_200": {
+    "complete": true,
+    "jobs": 600,
+    "runs_per_setting": 200,
+    "source_hash_verified": true,
+    "matched_method_inputs": true,
+    "all_13_terms_and_pooling_replayed": false,
+    "observed_cell_invariance": "covered by implementation tests; completed runs did not retain draws"
+  }
+}

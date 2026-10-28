@@ -1,5 +1,28 @@
 # Reproducibility map
 
+## Unified recurrent release (0.4.0)
+
+| Component | Entry point |
+| --- | --- |
+| Shared BRITS-GRU engine and stochastic imputation | `src/brits_mi/unified.py` |
+| Clinical coefficient fitting and reference scaling | `src/brits_mi/benchmark.py` |
+| Recurrent image input and common fusion classifier | `src/brits_mi/recurrent_image.py` |
+| Native R MICE/missForest interfaces | `src/brits_mi/comparators.py` and `src/brits_mi/r/impute.R` |
+| Fixed synthetic experiment launcher | `simulation/unified/run_benchmark.py` |
+| Verified aggregate results, tables and figures | `simulation/unified/release_results.py` |
+| Private reference-eligible TE masking analysis | `validation/unified_validation.py` |
+
+The completed clinical evaluation uses 200 cohorts per setting and M = 20.
+The image comparison correction and the distinction from the separate
+posterior-sampling development pilot are documented in
+[release_040.md](release_040.md). See the
+[current aggregate bundle](../results/unified_recurrent_20261027/README.md).
+
+## Archived analysis map
+
+The entries and counts below describe historical analyses, not the current
+unified recurrent evaluation. They remain for reproducibility.
+
 | Manuscript component | Repository entry point |
 |---|---|
 | RITS-GRU and bidirectional reconciliation | `src/brits_mi/model.py` |
@@ -22,7 +45,7 @@ paths and has not been rewritten. The former
 `reproducibility/run_reported_clinical.py` command remains a compatibility entry
 point. Reusable library code stays under `src/`.
 
-## Locked experiment descriptions
+## Archived experiment descriptions
 
 - Primary association benchmark: 500 subjects, 200 independent runs per 20%,
   40%, and 60% target late-cell missingness rate, and 50 completed datasets for

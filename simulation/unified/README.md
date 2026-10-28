@@ -23,7 +23,7 @@ same image descriptors for fusion analyses.
 - Real application: the user authorized the older source with 3,995 TE
   participants. The longitudinal reference analysis uses 2,209 eligible
   participants and 200 masks per percentage. These results remain separate
-  from the manuscript's 3,977-participant cohort.
+  from the newer full-cohort, 18-coefficient analysis specification.
 
 ### Irregular trajectories and masking
 
@@ -66,12 +66,12 @@ python simulation/unified/run_benchmark.py --kind clinical \
   --output results_local/clinical --n 500 --runs 200 --m 20 \
   --scenarios mild_harder baseline_harder strong_harder \
   --missing-percentages 20 40 60 --seed-start 910000 \
-  --bootstrap-members 5 --residual-mode correlated --workers 2
+  --bootstrap-members 5 --residual-mode correlated --workers 1
 ```
 
 Use `--kind image` for the image benchmark. Real data requires `--kind real`,
-`--input-dir`, and the confirmed input schema. The default cohort-size guard
-is 3,977; pass `--expected-cohort-size 3995` for the authorized older source.
+`--input-dir`, and the confirmed input schema. The default source-cohort-size guard
+is 3,995; pass `--expected-cohort-size` explicitly for any other authorized source.
 This check does not establish participant eligibility by itself. Real
 source-history eligibility and cohort counts are reported separately.
 
@@ -107,6 +107,18 @@ The fusion benchmark holds out labels but permits observed unlabeled test
 covariates in every imputer. It is transductive. Average class probabilities
 across imputations before calculating macro AUROC, macro average precision,
 and log loss. Do not Rubin-pool AUC values.
+
+In version 0.4.0 image MICE/missForest do not receive any outcome column.
+BRITS-MI uses known training labels in its supervised loss, never test labels.
+Every final method uses M classifier fits, including single-imputation
+methods whose same imputed dataset is used with M classifier seeds. The
+October 22 archived image run used training labels in comparators and unequal
+classifier-fit counts; reproduce it from commit `ae52dfa`, not this version.
+The clinical engine, outcome-inclusive clinical comparators, and DGP are unchanged.
+
+The POSIX runner locks its output directory and rejects incompatible resumes.
+Run from the repository checkout. Archive/freeze the source before starting a
+long experiment; changing files in a live source tree is not a valid resume.
 
 Real-data intervals are evaluated against a pre-mask reference estimate,
 not a known population coefficient. Natural missing values are not used as

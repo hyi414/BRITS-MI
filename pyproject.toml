@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brits-mi"
-version = "0.3.0"
+version = "0.4.0"
 description = "Analysis-aware multiple imputation for irregular longitudinal biomarkers using BRITS"
 readme = "README.md"
 requires-python = ">=3.10"

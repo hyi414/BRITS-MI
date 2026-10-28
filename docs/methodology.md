@@ -176,8 +176,13 @@ Default missForest has no inductive transform. This benchmark therefore
 allows every imputer to use observed unlabeled test covariates:
 it is **transductive, held-out-label prediction**, not external validation.
 True test labels never enter imputers, scalers, or checkpoint selection.
-They are missing in the MICE/missForest input frame and excluded from
-BRITS-MI supervision. All three methods receive the same image descriptors.
+In version 0.4.0 the entire outcome column is absent from MICE/missForest
+inputs. BRITS-MI uses only training labels in its classification loss; held-out
+labels are excluded. All three methods receive the same image descriptors.
+Each final method receives M classifier fits. For a single-imputation method,
+the imputed array is reused across M classifier initializations. This equalizes
+classifier fitting effort; it does not turn single imputation into multiple
+imputation or introduce between-imputation variance for missForest.
 
 Average the $M$ probability vectors first, then calculate macro
 one-versus-rest AUROC, macro average precision (reported as AUPRC), and
@@ -216,11 +221,12 @@ preprocessing. Pre-mask estimates and predictor SDs are evaluation references
 only. Interval inclusion of a reference estimate is not coverage of a known
 population parameter. Classification evaluated on the fitting cohort is
 reported as apparent performance. Naturally unavailable cells remain unknown.
-The user has authorized the older source for the new run: 3,995 TE participants,
-of whom 2,209 have at least two recorded bins for each liver marker and complete
+The current TE-only source contains 3,995 participants after excluding two
+MRE-coded records. The existing validation runner retains 2,209 participants
+with at least two recorded bins for each liver marker and complete
 required covariates. The reference-estimate masking analysis uses that subset.
-It is not relabeled as the manuscript's 3,977-participant cohort. Each new
-repeat masks observed cells before all model fitting and preprocessing.
+It is not the newer full-cohort, 18-coefficient application specification.
+Each repeat masks observed cells before all model fitting and preprocessing.
 
 ## Sources
 

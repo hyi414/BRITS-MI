@@ -21,11 +21,17 @@ from .unified import UnifiedBRITSMI, fusion_features
 
 
 def fusion_probabilities(draws, times, static, image, lengths, labels, train, test,
-                         seed, epochs=100, task_features=fusion_features):
+                         seed, epochs=100, task_features=fusion_features, n_fits=None):
     """Refit the same neural fusion head for each imputation; average probabilities."""
+    count = len(draws) if n_fits is None else n_fits
+    if not isinstance(count, (int, np.integer)) or count < 1:
+        raise ValueError("n_fits must be a positive integer")
+    if len(draws) not in {1, count}:
+        raise ValueError("provide either one imputation or one imputation per classifier fit")
     fit, valid = train_test_split(train, test_size=.2, random_state=seed + 51, stratify=labels[train])
     probabilities = []
-    for index, draw in enumerate(draws):
+    for index in range(count):
+        draw = draws[0] if len(draws) == 1 else draws[index]
         with torch.no_grad():
             clinical = task_features(torch.tensor(draw, dtype=torch.float32),
                 torch.tensor(times, dtype=torch.float32), torch.tensor(static, dtype=torch.float32),
@@ -59,6 +65,12 @@ def fusion_probabilities(draws, times, static, image, lengths, labels, train, te
     return np.mean(probabilities, 0)
 
 
+def impute_image_comparator(values, mask, times, static, image, lengths, method, m, seed):
+    """Use clinical/image covariates, never outcome labels, in image comparators."""
+    return r_impute(values, mask, times, static, method=method.lower(), m=m,
+                    seed=seed, context=image, lengths=lengths)
+
+
 def image_job(job, config, output):
     torch.set_num_threads(1)
     output = Path(output)
@@ -87,7 +99,9 @@ def image_job(job, config, output):
     # Test labels are never inputs to any imputer, scaler, head, or checkpoint selector.
     for method in job.get("methods", ["BRITS-MI", "MICE", "missForest", "Mean imputation", "Complete case", "Full data"]):
         started = time.monotonic()
-        audit = dict(method=method, input_hash=input_hash)
+        audit = dict(method=method, input_hash=input_hash,
+                     classifier_fit_budget=job["m"],
+                     imputer_outcome_policy="training_supervision" if method == "BRITS-MI" else "none")
         try:
             if method == "BRITS-MI":
                 model = UnifiedBRITSMI(replace(config, seed=seed), task="prediction",
@@ -96,8 +110,8 @@ def image_job(job, config, output):
                 draws = model.sample(job["m"], seed=seed + 310001)
                 audit["training"] = model.member_diagnostics_
             elif method in {"MICE", "missForest"}:
-                draws, r_audit = r_impute(values, mask, times, static, method=method.lower(),
-                    m=job["m"], seed=seed + 73001, outcome=training_labels, context=image, lengths=lengths)
+                draws, r_audit = impute_image_comparator(values, mask, times, static,
+                    image, lengths, method, job["m"], seed + 73001)
                 audit.update(r_audit)
             elif method == "Mean imputation":
                 draws = [mean_impute(values, mask | ~valid[:, :, None])]
@@ -109,7 +123,7 @@ def image_job(job, config, output):
                 if min(len(complete_train), len(complete_test)) < 30 or len(np.unique(data.labels[complete_train])) < 3 or len(np.unique(data.labels[complete_test])) < 3:
                     raise ValueError("too few complete-case training/test subjects for three-class evaluation")
                 prob = fusion_probabilities([data.y_true], times, static, image, lengths, data.labels,
-                    complete_train, complete_test, seed, job.get("head_epochs", 100))
+                    complete_train, complete_test, seed, job.get("head_epochs", 100), n_fits=job["m"])
                 # A different test population is not a paired contrast against all-subject methods.
                 audit["different_test_population"] = True
                 audit["n_complete_test"] = len(complete_test)
@@ -117,7 +131,7 @@ def image_job(job, config, output):
             evaluation = test if draws is not None else complete_test
             if draws is not None:
                 prob = fusion_probabilities(draws, times, static, image, lengths, data.labels,
-                    train, test, seed, job.get("head_epochs", 100))
+                    train, test, seed, job.get("head_epochs", 100), n_fits=job["m"])
                 mean = np.mean(draws, 0)
                 hidden = ~mask[test] & valid[test, :, None]
                 scale = np.array([np.std(data.y_true[train, :, j][valid[train]], ddof=1) for j in range(3)])
@@ -132,6 +146,7 @@ def image_job(job, config, output):
             else:
                 imputation_nrmse, trajectory_nrmse = np.nan, np.nan
             y = data.labels[evaluation]
+            audit["classifier_fits_completed"] = job["m"]
             rows.append(dict(method=method, status="valid", auroc=float(roc_auc_score(y, prob, multi_class="ovr", average="macro")),
                 auprc=float(average_precision_score(np.eye(3)[y], prob, average="macro")),
                 log_loss=float(log_loss(y, prob)), imputation_nrmse=imputation_nrmse,
