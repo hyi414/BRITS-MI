@@ -61,7 +61,7 @@ def clinical_association_score_loss(
     residual = outcome.to(completed.dtype) - torch.sigmoid(linear_predictor)
     augmented = torch.cat([torch.ones_like(residual[:, None]), design], dim=1)
     score = (augmented * residual[:, None]).mean(dim=0)
-    scale = torch.sqrt(augmented.square().mean(dim=0)).clamp_min(1e-4)
+    scale = torch.sqrt(augmented.square().mean(dim=0)).clamp_min(1e-4).detach()
     return 0.5 * (score / scale).square().mean()
 
 

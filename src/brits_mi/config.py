@@ -36,6 +36,18 @@ class TrainingConfig:
     device: str = "auto"
     losses: LossWeights = field(default_factory=LossWeights)
 
+    def __post_init__(self):
+        if min(self.epochs, self.hidden_size, self.batch_size) < 1:
+            raise ValueError("epochs, hidden_size, and batch_size must be positive")
+        if self.learning_rate <= 0 or self.gradient_clip <= 0 or self.variance_factor < 0:
+            raise ValueError("invalid learning rate, clipping, or residual multiplier")
+        for name in ("validation_fraction", "train_holdout_fraction",
+                     "validation_holdout_fraction", "residual_holdout_fraction"):
+            if not 0 < getattr(self, name) < 1:
+                raise ValueError(f"{name} must be between zero and one")
+        if any(v < 0 for v in asdict(self.losses).values()):
+            raise ValueError("loss weights must be nonnegative")
+
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
 

@@ -58,6 +58,8 @@ class BRITSMultipleImputer:
         context: np.ndarray | None,
     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         values = np.asarray(values, dtype=float)
+        if not np.isin(mask, [0, 1]).all():
+            raise ValueError("mask must be binary")
         mask = np.asarray(mask, dtype=bool)
         static = np.asarray(static, dtype=float)
         if values.ndim != 3 or mask.shape != values.shape:
@@ -69,13 +71,15 @@ class BRITSMultipleImputer:
             times = np.broadcast_to(times, values.shape[:2]).copy()
         if times.shape != values.shape[:2]:
             raise ValueError("times must have shape (visits,) or (subjects, visits)")
-        if not np.all(np.diff(times, axis=1) >= 0):
-            raise ValueError("times must be nondecreasing within subject")
+        if values.shape[1] < 3 or not np.isfinite(times).all() or not np.all(np.diff(times, axis=1) > 0):
+            raise ValueError("at least three finite strictly increasing visit times are required")
         if context is None:
             context = np.zeros((values.shape[0], 0), dtype=float)
         context = np.asarray(context, dtype=float)
         if context.ndim != 2 or context.shape[0] != values.shape[0]:
             raise ValueError("context must have shape (subjects, context_features)")
+        if not np.isfinite(static).all() or not np.isfinite(context).all():
+            raise ValueError("static and context must be finite")
         if np.any(mask & ~np.isfinite(values)):
             raise ValueError("every measured cell must contain a finite value")
         return values, mask, times, static, context
@@ -252,7 +256,7 @@ class BRITSMultipleImputer:
             with torch.no_grad():
                 y_val, mask_val, time_val, static_val, context_val, label_val = validation
                 validation_generator = torch.Generator(device=device).manual_seed(
-                    self.config.seed + epoch + 8801
+                    self.config.seed + 8801
                 )
                 artificial = (
                     torch.rand(
@@ -431,11 +435,16 @@ class BRITSMultipleImputer:
         self._require_fitted()
         if n_imputations < 1:
             raise ValueError("n_imputations must be positive")
+        new_data = values is not None
+        if new_data and any(x is None for x in (mask, times, static)):
+            raise ValueError("new-patient values require mask, times, and static")
+        if new_data and context is None and self.model_.n_context:
+            raise ValueError("new-patient context is required by the fitted model")
         values = self._fit_values if values is None else values
         mask = self._fit_mask if mask is None else mask
         times = self._fit_times if times is None else times
         static = self._fit_static if static is None else static
-        context = self._fit_context if context is None else context
+        context = self._fit_context if context is None and not new_data else context
         if values is None or mask is None or times is None or static is None:
             raise RuntimeError("fitted arrays are unavailable")
         values, mask, times, static, context = self._validate_arrays(
@@ -447,7 +456,7 @@ class BRITSMultipleImputer:
         standardized = (
             values - self.marker_mean_.reshape(1, 1, -1)
         ) / self.marker_sd_.reshape(1, 1, -1)
-        network_values = np.nan_to_num(standardized, nan=0.0).astype(np.float32)
+        network_values = np.where(mask, standardized, 0.0).astype(np.float32)
         network_mask = mask.astype(np.float32)
         network_times = times.astype(np.float32)
         network_static = static.astype(np.float32)

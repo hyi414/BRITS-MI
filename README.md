@@ -24,52 +24,61 @@ install.packages(c("mice", "missForest"))
 
 ## Clinical Input
 
-`BRITSMultipleImputer` accepts biomarker values and observation masks
+`UnifiedBRITSMI` accepts biomarker values and observation masks
 (`N x T x J`), visit times (`N x T`), static covariates (`N x P`), and a binary
 training outcome (`N`). Here, `N`, `T`, and `J` denote subjects, visits, and
 biomarkers. The mask, not a value of zero, identifies missing observations.
 
 ```python
-from brits_mi import BRITSMultipleImputer, TrainingConfig
+from brits_mi import UnifiedBRITSMI, UnifiedConfig
 
-imputer = BRITSMultipleImputer(TrainingConfig(seed=21))
+config = UnifiedConfig(seed=21, bootstrap_members=5, residual_mode="correlated")
+imputer = UnifiedBRITSMI(config, task="association")
 imputer.fit(values, mask, times, static, outcome)
-imputed_datasets = imputer.sample(n_imputations=20, seed=22)
+imputed_datasets = imputer.sample(20, seed=22)
 ```
 
 The recurrent model learns from observed longitudinal data and the specified
 downstream outcome. Sampling retains observed values and returns multiple
 imputed trajectories. Optional `context` supplies additional subject-level
-features. New-patient sampling does not require an outcome label.
+features. Association imputations condition on an observed outcome.
+Use `task="prediction"` for label-free new-patient imputation and prediction.
 
 See the [clinical example](examples/run_clinical_association.py),
 [input specification](docs/data_contract.md), and
-[methodology](docs/methodology.md). The manuscript clinical runner also applies
-the specified missForest conditional-mean anchor; it is provided separately
-under [`simulation/clinical/`](simulation/clinical/).
+[methodology](docs/methodology.md). The unified recurrent implementation does
+not use a missForest mean anchor or a true-coefficient correction. Historical
+implementations and their saved results remain under `simulation/clinical/`
+and `reproducibility/`; they must not be attributed to the new engine.
 
 ## Clinical + Image Input
 
-`BRITSMIImage` accepts longitudinal values, masks, times, sequence lengths,
-clinical covariates, and grayscale images (`N x 1 x 24 x 24`). Training labels
-are coded `0`, `1`, and `2` for the three outcome categories.
+The same recurrent engine accepts subject-level image features through
+`context`. The current benchmark extracts 17 descriptors from synthetic
+grayscale ultrasound-like images. Labels are coded `0`, `1`, and `2`;
+`-1` marks an unavailable training label.
 
 ```python
-from brits_mi.image_fusion import BRITSMIImage, ImageFusionConfig
+from brits_mi import UnifiedBRITSMI, UnifiedConfig
+from brits_mi.unified import fusion_features
 
-fusion = BRITSMIImage(ImageFusionConfig(seed=21, prototype_alpha=0.0))
-fusion.fit(train_values, train_mask, train_times, train_lengths,
-           train_covariates, train_images, train_labels)
-imputed_values = fusion.complete(
-    test_values, test_mask, test_times, test_lengths, test_covariates, test_images)
+fusion = UnifiedBRITSMI(
+    UnifiedConfig(seed=21, bootstrap_members=5, residual_mode="correlated"),
+    task="prediction", feature_function=fusion_features)
+fusion.fit(train_values, train_mask, train_times, train_covariates,
+           train_labels, context=train_image_features, lengths=train_lengths)
 probabilities = fusion.predict_proba(
-    test_values, test_mask, test_times, test_lengths, test_covariates, test_images)
+    values=test_values, mask=test_mask, times=test_times, static=test_covariates,
+    context=test_image_features, lengths=test_lengths, m=20)
 ```
 
-This extension uses image-conditioned tree regressors for imputation and an
-ExtraTrees classifier for feature-level fusion. It produces a single imputed
-dataset and class probabilities; it is not the recurrent multiple-imputation
-engine. See [image inputs, feature extraction, and fusion](docs/image_fusion.md).
+Image information enters both recurrent paths, current-cell predictions,
+and the fusion head. No test outcomes are required. The new benchmark uses
+a common refitted neural head and allows unlabeled test covariates in
+imputation to accommodate default missForest. See the
+[recurrent methodology](docs/methodology.md#recurrent-clinical-image-extension).
+The earlier tree-based `BRITSMIImage` remains available for archived results;
+it is not this recurrent implementation.
 
 ## Simulation Comparisons
 
@@ -78,26 +87,27 @@ imputation, complete-case analysis, and full-data analysis using matched
 synthetic datasets:
 
 ```bash
-python simulation/run_simulation.py --experiment clinical \
-  --subjects 500 --runs 500 --missing-percentages 20 40 60 \
-  --methods brits mice missforest baselines \
-  --output results_local/clinical --execute
+python simulation/unified/run_benchmark.py --kind clinical \
+  --n 500 --runs 200 --m 20 --missing-percentages 20 40 60 \
+  --bootstrap-members 5 --residual-mode correlated \
+  --output results_local/clinical
 ```
 
-Omit `--execute` to inspect the commands without starting a run. The
-[`simulation/`](simulation/README.md) directory contains the clinical and image
-experiment scripts, sensitivity analyses, R comparator interfaces, and output
-definitions. Reusable model and data-generation functions remain in `src/`.
+The command starts a run. Use `--kind image` for the recurrent fusion
+comparison. Outputs record source/configuration hashes, matched input hashes,
+valid and invalid fits, and completed counts. The
+[unified protocol](simulation/unified/README.md) separates development from
+200-seed evaluation. Archived launchers remain under
+[`simulation/`](simulation/README.md).
 
 ## Main Outputs
 
 | Function or runner | Output |
 | --- | --- |
-| `BRITSMultipleImputer.fit(...)` | Fitted recurrent imputer, training history, and residual-scale calibration |
-| `BRITSMultipleImputer.sample(...)` | List of `M` imputed arrays, each shaped `N x T x J` |
+| `UnifiedBRITSMI.fit(...)` | Recurrent ensemble, training history, and validation residual covariance |
+| `UnifiedBRITSMI.sample(M, ...)` | List of `M` imputed arrays, each shaped `N x T x J` |
 | `pool_logistic_regressions(...)` | Pooled coefficients, standard errors, confidence intervals, and imputation counts |
-| `BRITSMIImage.complete(...)` | Imputed biomarker array, shaped `N x T x 3` |
-| `BRITSMIImage.predict_proba(...)` | Three-class probabilities, shaped `N x 3` |
+| `UnifiedBRITSMI.predict_proba(...)` | Mean class probability vectors across imputations |
 | Clinical simulation runner | Per-run coefficient estimates, bias, MSE, coverage, imputation RMSE, trajectory-summary RMSE, and aggregate summaries |
 | Image simulation runner | AUROC, AUPRC, classification loss, imputation error, and run configuration |
 | Real-data masking runner | Source-relative coefficient estimates and interval coverage, masked-cell and trajectory errors, apparent classification metrics, and training/comparator logs |
@@ -114,15 +124,22 @@ repository**. No dataset, patient identifiers, imputed patient records, or
 cohort-trained weights are distributed.
 
 ```bash
-python validation/run_validation.py \
+python simulation/unified/run_benchmark.py --kind real \
   --input-dir /secure/analysis_ready_cohort \
+  --expected-cohort-size 3995 \
   --output /secure/brits_mi_validation \
-  --repeats 500 --missing-percentages 20 40 60
+  --runs 200 --m 20 --missing-percentages 20 40 60 \
+  --bootstrap-members 5 --residual-mode correlated
 ```
 
-This reproduces the same-cohort observed-cell masking design. Its coefficient
-reference is the pre-mask model, not a known population parameter. See the
-[validation protocol](validation/README.md) for training, masking, and outputs.
+Every imputer is fitted after masking. Its coefficient reference is the
+pre-mask model, not a known population parameter. Apparent classification is
+reported separately. The currently authorized older source contains 3,995 TE
+participants; 2,209 meet the prespecified longitudinal reference requirements.
+These are separate source and analysis denominators, not the manuscript's
+3,977-participant cohort. The 200-repeat results must be verified before use.
+See `validation/unified_validation.py` and the
+[methodology](docs/methodology.md#comparators-and-real-data-masking).
 
 ## Development
 

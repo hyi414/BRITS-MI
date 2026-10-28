@@ -31,6 +31,9 @@ brits-mi-image = "brits_mi.image_fusion:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+brits_mi = ["r/*.R"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"

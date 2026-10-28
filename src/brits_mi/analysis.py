@@ -8,8 +8,8 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
-from scipy.stats import norm
-from statsmodels.tools.sm_exceptions import PerfectSeparationError
+from scipy.stats import t
+from statsmodels.tools.sm_exceptions import PerfectSeparationError, PerfectSeparationWarning
 
 COEFFICIENT_ORDER = (
     "late_ast",
@@ -37,6 +37,7 @@ class PooledLogisticResult:
     confidence_interval: pd.DataFrame
     n_imputations_used: int
     n_subjects_used: int
+    degrees_of_freedom: pd.Series | None = None
 
 
 def trajectory_features(trajectory: np.ndarray, times: np.ndarray) -> pd.DataFrame:
@@ -46,14 +47,16 @@ def trajectory_features(trajectory: np.ndarray, times: np.ndarray) -> pd.DataFra
     if trajectory.ndim != 3 or trajectory.shape[2] < 3:
         raise ValueError("trajectory must have shape (subjects, visits, at least 3 markers)")
     times = np.asarray(times, dtype=float)
-    if times.ndim == 2:
-        if not np.allclose(times, times[0]):
-            raise ValueError("this summary currently requires a shared visit-time grid")
-        times = times[0]
+    if times.ndim == 1:
+        times = np.broadcast_to(times, trajectory.shape[:2])
+    if times.shape != trajectory.shape[:2] or trajectory.shape[1] < 3:
+        raise ValueError("times must match subjects/visits, with at least three visits")
+    if not np.isfinite(times).all() or np.any(np.diff(times, axis=1) <= 0):
+        raise ValueError("visit times must be finite and strictly increasing")
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", category=RuntimeWarning)
         late_mean = np.nanmean(trajectory[:, -3:, :3], axis=1)
-    denominator = max(float(times[-1] - times[-3]), 1e-6)
+    denominator = (times[:, -1] - times[:, -3])[:, None]
     slope = (trajectory[:, -1, :3] - trajectory[:, -3, :3]) / denominator
     return pd.DataFrame(
         {
@@ -94,6 +97,7 @@ def pool_logistic_regressions(
     static: np.ndarray,
     outcome: np.ndarray,
     confidence: float = 0.95,
+    reference_scale: np.ndarray | None = None,
 ) -> PooledLogisticResult:
     """Refit the logistic outcome model in every completion and apply Rubin's rules."""
 
@@ -115,14 +119,9 @@ def pool_logistic_regressions(
             static[keep, 1],
             static[keep, 2],
         )
-        try:
-            fit = sm.GLM(
-                outcome[keep],
-                sm.add_constant(design, has_constant="add"),
-                family=sm.families.Binomial(),
-            ).fit(maxiter=100, disp=False)
-        except (FloatingPointError, np.linalg.LinAlgError, PerfectSeparationError, ValueError):
-            continue
+        if reference_scale is not None:
+            design = design / np.asarray(reference_scale)
+        fit = validated_logistic_fit(outcome[keep], design)
         estimates.append(fit.params.drop("const"))
         variances.append(fit.bse.drop("const") ** 2)
         sample_sizes.append(int(keep.sum()))
@@ -139,7 +138,9 @@ def pool_logistic_regressions(
         between = pd.Series(0.0, index=pooled.index)
     total = within + (1.0 + 1.0 / len(estimate_frame)) * between
     standard_error = np.sqrt(np.maximum(total, 1e-12))
-    critical = float(norm.ppf(0.5 + confidence / 2.0))
+    df = barnard_rubin_df(within.to_numpy(), between.to_numpy(), len(estimates),
+                         min(sample_sizes) - len(COEFFICIENT_ORDER) - 1)
+    critical = t.ppf(0.5 + confidence / 2.0, df)
     interval = pd.DataFrame(
         {
             "lower": pooled - critical * standard_error,
@@ -154,7 +155,62 @@ def pool_logistic_regressions(
         confidence_interval=interval,
         n_imputations_used=len(estimate_frame),
         n_subjects_used=round(float(np.mean(sample_sizes))),
+        degrees_of_freedom=pd.Series(df, index=pooled.index),
     )
+
+
+def validated_logistic_fit(outcome, design):
+    """Reject non-identifiable fits rather than counting huge intervals as recovery."""
+    x = sm.add_constant(pd.DataFrame(design), has_constant="add")
+    y = np.asarray(outcome, dtype=float)
+    if not np.isfinite(x.to_numpy()).all() or not np.isfinite(y).all():
+        raise ValueError("nonfinite outcome-model input")
+    if len(np.unique(y)) != 2 or len(y) <= x.shape[1] + 1:
+        raise ValueError("insufficient observations or outcome variation")
+    if np.linalg.matrix_rank(x.to_numpy()) != x.shape[1]:
+        raise ValueError("rank-deficient outcome design")
+    # A finite MLE need not exist under quasi-separation, even when IRLS reports
+    # convergence. Test whether a nonzero nonnegative signed margin is feasible.
+    from scipy.optimize import linprog
+    matrix = x.to_numpy()
+    signed = (2 * y - 1)[:, None] * matrix / np.maximum(np.linalg.norm(matrix, axis=0), 1e-12)
+    separation = linprog(-signed.sum(0), A_ub=-signed, b_ub=np.zeros(len(y)),
+                         bounds=[(-1., 1.)] * matrix.shape[1], method="highs")
+    if not separation.success:
+        raise ValueError("logistic separation check did not converge")
+    if -separation.fun > 1e-7:
+        raise ValueError("complete or quasi-separated logistic fit")
+    with warnings.catch_warnings():
+        warnings.simplefilter("error", PerfectSeparationWarning)
+        warnings.simplefilter("error", RuntimeWarning)
+        try:
+            fit = sm.GLM(y, x, family=sm.families.Binomial()).fit(maxiter=200, disp=False)
+        except (PerfectSeparationError, PerfectSeparationWarning, RuntimeWarning) as exc:
+            raise ValueError("separated or numerically unstable logistic fit") from exc
+    covariance = np.asarray(fit.cov_params())
+    if (not fit.converged or not np.isfinite(fit.params).all()
+            or not np.isfinite(covariance).all()
+            or np.min(np.linalg.eigvalsh(covariance)) <= 0):
+        raise ValueError("invalid convergence or covariance")
+    probability = np.asarray(fit.fittedvalues)
+    information = x.to_numpy().T @ ((probability * (1 - probability))[:, None] * x.to_numpy())
+    if np.linalg.cond(information) > 1e12:
+        raise ValueError("near-singular logistic information")
+    if np.all((probability >= 0.5) == y) and np.max(np.abs(probability - y)) < 1e-6:
+        raise ValueError("perfectly separated logistic fit")
+    return fit
+
+
+def barnard_rubin_df(within, between, m, df_complete):
+    """Small-sample MI degrees of freedom, including single-imputation limit."""
+    within, between = np.asarray(within), np.asarray(between)
+    if m == 1:
+        return np.full_like(within, float(df_complete))
+    total = within + (1 + 1 / m) * between
+    fraction = np.clip((1 + 1 / m) * between / np.maximum(total, 1e-30), 0, 1)
+    old = (m - 1) / np.maximum(fraction, 1e-15) ** 2
+    observed = (df_complete + 1) / (df_complete + 3) * df_complete * (1 - fraction)
+    return 1 / (1 / old + 1 / np.maximum(observed, 1e-12))
 
 
 def coefficient_recovery(

@@ -1,211 +1,230 @@
-# BRITS-MI methodology
-
-## 1. Model hierarchy
-
-BRITS-MI is a hierarchy rather than a new recurrent cell:
-
-1. A gated recurrent unit (GRU) updates the nonlinear hidden state.
-2. Recurrent Imputation for Time Series (RITS) surrounds the GRU with elapsed-time decay, temporal prediction, zero-diagonal cross-marker regression, and observed-value substitution.
-3. Bidirectional Recurrent Imputation for Time Series (BRITS) runs RITS forward and backward and reconciles the two predictions.
-4. BRITS-MI adds artificial holdouts, trajectory-summary and downstream losses, stochastic completed datasets, optional estimating-score calibration, downstream refitting, and Rubin pooling.
-
-The outcome may influence training. It is not an input when a frozen imputer completes a new patient's trajectory. Outcome-inclusive score calibration is a separate explanatory-analysis operation.
-
-## 2. Irregular longitudinal input
-
-For subject `i`, visit `t`, and marker vector `Y_it`, let `M_it` be the source-observation mask, `R_it` an artificial holdout sampled only where `M_it=1`, and `Delta_it` the marker-specific elapsed times. During training,
-
-```math
-M^{in}=M\odot(1-R),
-\qquad
-u_{it}=[Y^{in}_{it}\odot M^{in}_{it},M^{in}_{it},\Delta_{it},H^{past}_{it},S_i,V_i,\tau_{it}].
-```
-
-`S_i` contains static covariates, `V_i` optional image context, and `H^{past}` directional history summaries. An unavailable standardized value is stored as zero, but the mask distinguishes that placeholder from a measured zero.
-
-## 3. One RITS-GRU direction
-
-For direction `d` in `{F,B}`, elapsed time decays the old state:
-
-```math
-\gamma^d_{it}=\exp[-\operatorname{ReLU}(W^d_\gamma\Delta^d_{it}+b^d_\gamma)],
-\qquad
-\bar h^d_{i,t-1}=\gamma^d_{it}\odot h^d_{i,t-1}.
-```
-
-The temporal and zero-diagonal cross-marker estimates are
-
-```math
-\widehat Y^{hist,d}_{it}=W_h^d\bar h^d_{i,t-1}+b_h^d,
-```
-
-```math
-\widehat Y^{feat,d}_{it}=[W_f^d\odot(\mathbf 1-I_p)]Y^{prov,d}_{it}+b_f^d.
-```
-
-A mask-and-gap gate combines them and the observed-value lock forms the completed visit:
-
-```math
-a^d_{it}=\sigma\{W_a^d[M^{in,d}_{it},\Delta^d_{it}]+b_a^d\},
-```
-
-```math
-\widehat Y^d_{it}=a^d_{it}\odot\widehat Y^{feat,d}_{it}
-+(1-a^d_{it})\odot\widehat Y^{hist,d}_{it},
-```
-
-```math
-Y^d_{it}=M^{in,d}_{it}\odot Y^{in,d}_{it}
-+(1-M^{in,d}_{it})\odot\widehat Y^d_{it}.
-```
-
-With recurrent input `x_it^d=[Y_it^d,M_it^{in,d},Delta_it^d,H_it^d,S_i,V_i,tau_it^d]`, the GRU update is
-
-```math
-r^d_{it}=\sigma(W_r^dx^d_{it}+U_r^d\bar h^d_{i,t-1}+b_r^d),
-```
-
-```math
-z^d_{it}=\sigma(W_z^dx^d_{it}+U_z^d\bar h^d_{i,t-1}+b_z^d),
-```
-
-```math
-n^d_{it}=\tanh\{W_n^dx^d_{it}+b_n^d+r^d_{it}\odot(U_n^d\bar h^d_{i,t-1}+c_n^d)\},
-```
-
-```math
-h^d_{it}=(1-z^d_{it})\odot n^d_{it}+z^d_{it}\odot\bar h^d_{i,t-1}.
-```
-
-The reset gate chooses which decayed history enters the candidate state; the update gate chooses how much old state is retained. Because the imputed visit enters `x_it^d`, one missing-cell estimate changes the state used at later visits in that direction.
-
-## 4. BRITS reconciliation
-
-The released code combines the two directional predictions using a gate based on the mask and elapsed gaps:
-
-```math
-q_{it}=\sigma\{W_q[M^{in}_{it},\Delta_{it}]+b_q\},
-```
-
-```math
-\mu_{\theta,it}=q_{it}\odot\widehat Y^F_{it}
-+(1-q_{it})\odot\widehat Y^B_{it},
-```
-
-where `theta=(theta_F,theta_B,theta_q)`. Measured values are then restored:
-
-```math
-\widetilde Y_i=M_i\odot Y_i+(1-M_i)\odot\mu_{\theta,i}.
-```
-
-## 5. Composite training objective
-
-For downstream parameters `psi`, minibatch `B`, and artificial mask `R`, BRITS-MI minimizes
-
-```math
-\mathcal L_{\mathcal B,R}(\theta,\psi)=
-\lambda_{rec}\mathcal L_{rec}
-+\lambda_{cons}\mathcal L_{cons}
-+\lambda_{sum}\mathcal L_{sum}
-+\lambda_{down}\mathcal L_{down}.
-```
-
-`L_rec` evaluates only hidden-but-known measured cells; `L_cons` penalizes forward-backward disagreement; `L_sum` preserves prespecified trajectory summaries; and `L_down` is the association-score or classification target. Nonnegative loss weights are selected on artificial validation holdouts and then frozen.
-
-## 6. Exact downstream gradient into BRITS-MI
-
-Stack each subject's cells and define the missing-cell selector `D_i=diag(1-m_i)`. For a multiclass downstream head,
-
-```math
-g_i=G(\widetilde y_i,S_i,V_i),
-\qquad
-\pi_i=\operatorname{softmax}\{f_\psi(g_i)\}.
-```
-
-The cross-entropy gradient reaching the recurrent imputer is
-
-```math
-\nabla_\theta\mathcal L_{down}
-=|\mathcal B|^{-1}\sum_{i\in\mathcal B}
-J_\theta\mu_{\theta,i}^{\mathsf T}
-D_iJ_G(\widetilde y_i)^{\mathsf T}
-J_{f_\psi}(g_i)^{\mathsf T}(\pi_i-e_{O_i}).
-```
-
-The factors respectively represent BRITS sensitivity, the missing-cell lock, trajectory/fusion-feature sensitivity, downstream-head sensitivity, and prediction error. Because `D_i` is zero at measured cells, the downstream loss cannot change a source-observed value.
-
-The BRITS Jacobian further decomposes as
-
-```math
-J_\theta\mu_{\theta,it}
-=D(q_{it})J_\theta\widehat Y^F_{it}
-+D(1-q_{it})J_\theta\widehat Y^B_{it}
-+D(\widehat Y^F_{it}-\widehat Y^B_{it})J_\theta q_{it}.
-```
-
-Hence downstream error updates the forward and backward RITS-GRU parameters and the reconciliation gate. Back-propagation through time also carries the signal across visits through products of GRU state-transition Jacobians.
-
-## 7. Association target and coefficient-control result
-
-For a reference coefficient `beta*`, define a standardized estimating-score loss
-
-```math
-\mathcal L_{score}
-=(2d)^{-1}\|D_s^{-1}U(\beta^*;\widetilde Y)\|_2^2.
-```
-
-Its recurrent-parameter gradient is
-
-```math
-\nabla_\theta\mathcal L_{score}
-=d^{-1}J_\theta\widetilde y^{\mathsf T}
-J_U(\widetilde y)^{\mathsf T}D_s^{-2}U(\beta^*;\widetilde Y).
-```
-
-If the downstream estimate solves `U(beta_hat;Y_tilde)=0` and the averaged score Jacobian `A_n` between `beta*` and `beta_hat` is nonsingular, the mean-value identity gives
-
-```math
-\widehat\beta-\beta^*=A_n^{-1}U(\beta^*;\widetilde Y),
-```
-
-and therefore
-
-```math
-\|\widehat\beta-\beta^*\|_2
-\leq\|A_n^{-1}D_s\|_2\sqrt{2d\mathcal L_{score}}.
-```
-
-This bound explains why reducing the score discrepancy can preserve a coefficient even when cell RMSE changes little. It is conditional on a locally identifiable, well-conditioned outcome model and does not prove that naturally missing values are identified.
-
-## 8. Stochastic completion, optional calibration, and pooling
-
-After selecting and freezing a validation checkpoint, marker-specific residual scales are estimated on separate artificial holdouts. Completion `q` draws only missing cells:
-
-```math
-\widetilde Y_{itj}^{(q)}=M_{itj}Y_{itj}
-+(1-M_{itj})\{\mu_{\widehat\theta,itj}+\kappa\widehat\sigma_j\epsilon_{itj}^{(q)}\},
-\qquad \epsilon_{itj}^{(q)}\sim N(0,1).
-```
-
-For an explanatory association analysis, the optional bounded calibration step is
-
-```math
-y_{mis}^{(\ell+1)}=\Pi_{\mathcal C}
-\{y_{mis}^{(\ell)}-\rho_\ell P_\ell\nabla_{y_{mis}}\mathcal L_{score}\}.
-```
-
-Backtracking accepts only a non-increasing score loss up to numerical tolerance, and observed cells are restored after every proposal. The downstream model is then refitted in every completed dataset. Estimates and variances are combined with Rubin's rules.
-
-## 9. Optimization guarantee and its scope
-
-Let `vartheta=(theta,psi)` and `F(vartheta)=E_{B,R}[L_{B,R}(vartheta)]`. Under a lower-bounded smooth objective, a Lipschitz gradient with constant `L_F`, and an unbiased stochastic gradient with conditional variance at most `sigma_g^2`, stochastic gradient descent with `eta<=1/L_F` obeys
-
-```math
-K^{-1}\sum_{k=0}^{K-1}\mathbb E\|\nabla F(\vartheta_k)\|_2^2
-\leq\frac{2\{F(\vartheta_0)-F_{inf}\}}{\eta K}
-+\eta L_F\sigma_g^2.
-```
-
-This is convergence toward a first-order stationary point of the smooth composite objective, not a global optimum. The implementation uses finite-epoch AdamW, gradient clipping, and validation checkpointing, so the theorem is an objective-level result rather than a guarantee for every fitted checkpoint. Nominal multiple-imputation coverage additionally requires an identified conditional model, proper stochastic draws, congenial downstream analysis, and valid within- and between-imputation variance.
-
-See `src/brits_mi/model.py`, `src/brits_mi/imputer.py`, `src/brits_mi/calibration.py`, and `src/brits_mi/analysis.py` for the corresponding implementation.
+# Unified recurrent BRITS-MI
+
+This specifies `UnifiedBRITSMI` in `src/brits_mi/unified.py` and
+the new comparisons in `simulation/unified/`. Earlier implementations
+remain available in [the legacy specification](methodology_legacy.md);
+their results are not results from the new recurrent implementation.
+
+## Analysis target and observed information
+
+Let $Y_{itj}$ denote biomarker $j$ at time $\tau_{it}$ for subject $i$,
+$S_i$ observed static covariates, $C_i$ the outcome, and $V_i=\phi(I_i)$
+optional image features. The source-observation indicator is $M_{itj}$.
+In a masking experiment, $A_{itj}=1$ denotes a measured cell hidden before
+any imputer is fitted. The imputer receives $O=M\odot(1-A)$ and values
+only where $O=1$. A separate training mask $R$ is sampled within $O=1$,
+giving $Q=O\odot(1-R)$. Structural padding is neither missing data nor an
+evaluation target.
+
+The feature map $G(Y_i,\tau_i,S_i)$ defines the downstream model. Clinical
+association analysis uses binary logistic regression with an intercept and
+13 terms: late AST, ALT, and platelet levels; their three terminal slopes;
+diabetes, hypertension, and sex; AST level by diabetes; AST slope by
+diabetes; platelet slope by hypertension; and hypertension by sex.
+For each marker, the late level is the mean of the last three visits and
+the terminal slope is the last-minus-third-last value divided by elapsed time.
+
+The shared engine supports two distinct information settings:
+
+- **Association analysis:** the observed outcome enters the imputation
+  context, as in outcome-inclusive MICE. Its one-hot encoding is not
+  directly supplied to the downstream head, which receives the planned
+  clinical design. New association imputations require an observed outcome.
+- **Prediction:** training labels supervise the head, but held-out labels
+  never enter the imputer. New-patient inputs consist of observed biomarkers,
+  masks, times, covariates, and optional images.
+
+## RITS, GRU, and BRITS
+
+Recurrent Imputation for Time Series (RITS) combines elapsed-time decay,
+history regression, cross-marker regression, and a gated recurrent unit
+(GRU). Bidirectional Recurrent Imputation for Time Series (BRITS) combines
+forward and backward RITS. Original BRITS already supports downstream
+supervision [1]; adding classification cross-entropy alone is not the
+contribution here. The extension targets stochastic multiple imputation
+and recovery of prespecified regression associations as well as prediction.
+
+In each direction, $\Delta_{it}$ is time since the previous observed value.
+Times are divided by the median valid follow-up duration in inner-training
+subjects; padding is excluded. The decayed state and history estimate are
+
+$$\gamma_{it}=\exp\{-\operatorname{ReLU}(W_\gamma\Delta_{it}+b_\gamma)\},\qquad \bar h_{i,t-1}=\gamma_{it}\odot h_{i,t-1},$$
+$$a_{it}=W_h\bar h_{i,t-1}+b_h.$$
+
+Restore observations in $Y^p_{it}=Q_{it}\odot Y_{it}+(1-Q_{it})\odot a_{it}$.
+The zero-diagonal cross-marker estimate is
+$b_{it}=(W_f\odot(1-I))Y^p_{it}+b_f$. A mask-and-gap gate combines estimates:
+
+$$\alpha_{it}=\sigma(W_\alpha[Q_{it},\Delta_{it}]+b_\alpha),\qquad \widehat Y_{it}=\alpha_{it}\odot b_{it}+(1-\alpha_{it})\odot a_{it},$$
+$$Y^c_{it}=Q_{it}\odot Y_{it}+(1-Q_{it})\odot\widehat Y_{it}.$$
+
+The GRU input $u_{it}$ contains $Y^c_{it}$, masks, time gaps, static and image
+context, time, and directional observed-history summaries. The summaries
+(mean, SD, most recent value, first-to-most-recent slope, and observed/missing
+proportions) use only measurements preceding that update. The PyTorch GRU
+convention is
+
+$$r_{it}=\sigma(W_ru_{it}+U_r\bar h_{i,t-1}+b_r),\qquad z_{it}=\sigma(W_zu_{it}+U_z\bar h_{i,t-1}+b_z),$$
+$$n_{it}=\tanh\{W_nu_{it}+b_n+r_{it}\odot(U_n\bar h_{i,t-1}+c_n)\},$$
+$$h_{it}=(1-z_{it})\odot n_{it}+z_{it}\odot\bar h_{i,t-1}.$$
+
+The reset gate controls history entering the candidate state; the update
+gate controls retention of the previous state. Forward and backward passes
+have separate parameters. A context network adds a subject-specific shift
+to their predictions. With a learned mask-and-gap gate $q_{it}$,
+
+$$\mu_{\theta,it}=q_{it}\odot\widehat Y^F_{it}+(1-q_{it})\odot\widehat Y^B_{it}+s_\theta(S_i,V_i,C_i).$$
+
+$C_i$ is omitted in prediction mode. Image information therefore changes
+current-cell predictions directly and later states through the GRU input.
+The network predicts a conditional mean, not a learned residual scale.
+
+## Objective and downstream gradient
+
+Observed biomarkers are standardized using inner-training observations
+only. The fixed development objective is
+
+$$\mathcal L(\theta,\psi)=\mathcal L_{rec}+0.1\mathcal L_{cons}+0.2\mathcal L_{sum}+0.2\mathcal L_{down}.$$
+
+- $\mathcal L_{rec}$ is standardized squared error on artificially hidden
+  measured training cells.
+- $\mathcal L_{cons}$ penalizes forward-backward disagreement on valid
+  cells with $Q=0$.
+- $\mathcal L_{sum}$ is squared error in standardized downstream features.
+  Its reference restores observed training values and uses detached current
+  predictions where values are unavailable. Neither hidden simulation truth
+  nor full-data coefficients enter this reference.
+- $\mathcal L_{down}$ is binary cross-entropy for the clinical logistic head
+  or multiclass cross-entropy for the neural fusion head. Only known training
+  outcomes contribute.
+
+Let $D_i=\operatorname{diag}(1-Q_i)$, $g_i=G(\widetilde Y_i,\tau_i,S_i)$,
+$\eta_i=f_\psi(g_i,V_i)$, and $p_i$ the outcome probability vector. For the
+subjects with known training outcomes, $\mathcal B_C$,
+
+$$\nabla_\theta\mathcal L_{down}=\frac1{|\mathcal B_C|}\sum_{i\in\mathcal B_C}(J_\theta\mu_i)^T D_i(J_YG_i)^T(J_gf_\psi)^T(p_i-e_{C_i}).$$
+
+$J$ denotes a Jacobian; in binary logistic regression the last factor is
+$p_i-C_i$. This connects outcome error through the planned features and
+imputed cells to both RITS-GRU directions, their gates, and the context
+network. The observation lock gives zero direct gradient through retained
+measurements. Shared parameters still learn from observed training cells.
+
+Training uses AdamW (learning rate 0.002, weight decay 0.0001), hidden
+dimension 48, minibatches of 128, gradient clipping at norm 5, up to 120
+epochs, and patience 25. Twenty percent of subject groups form the internal
+validation set. Training masks 25% of available cells. A fixed validation
+mask and the lowest composite validation loss select the checkpoint.
+The new implementation does not use a true-coefficient score loss,
+a missForest conditional-mean anchor, or deterministic outcome correction.
+
+## Stochastic imputation and refitting
+
+Development runs compared independent residual draws, correlated residual
+draws, and correlated draws with subject-bootstrap refitting. The third
+scheme is carried forward: five networks fit bootstrap samples of
+inner-training subjects, with one fixed validation partition and shared
+training-based preprocessing. This approximates parameter-estimation
+uncertainty; it is not an exact parameter posterior.
+
+For each selected network, six new artificial validation masks provide
+residuals. A cell-pair residual second-moment matrix is shrunk halfway to
+its diagonal, projected to positive definiteness, and rescaled to preserve
+the estimated diagonal. Denote it $\widehat\Sigma_b$ in standardized units.
+Imputation $q$ selects a network $b_q$ uniformly and draws
+
+$$\varepsilon_i^{(q)}\sim N(0,\widehat\Sigma_{b_q}),\qquad Y_i^{(q)}=O_i\odot Y_i+(1-O_i)\odot\{\mu_{\theta_{b_q},i}+\varepsilon_i^{(q)}\}.$$
+
+The residual multiplier is one. Residuals are independent between subjects
+and correlated across cells within a subject. They are added jointly after
+a recurrent mean pass, not fed back through the recurrent states.
+Observed measurements remain fixed and padding is excluded. There are
+$M=20$ imputations in the new benchmark.
+
+Refit the planned outcome model in each imputed dataset. With estimates
+$\widehat\beta^{(q)}$ and covariance matrices $U^{(q)}$, use
+
+$$\bar\beta=M^{-1}\sum_q\widehat\beta^{(q)},\qquad \bar U=M^{-1}\sum_q U^{(q)},$$
+$$B=(M-1)^{-1}\sum_q(\widehat\beta^{(q)}-\bar\beta)(\widehat\beta^{(q)}-\bar\beta)^T,\qquad T=\bar U+(1+M^{-1})B.$$
+
+Scalar intervals use Barnard-Rubin degrees of freedom [2]. One common
+reference SD for each predictor transforms all fitted coefficients and
+covariances. Simulation reference SDs come from an independent 20,000-subject
+synthetic reference and never enter training. Every requested downstream
+fit must be valid. Rank deficiency, separation, invalid covariance, and
+nonconvergence are recorded, not pooled or silently discarded.
+
+## Recurrent clinical-image extension
+
+The alternative-ultrasound generator produces synthetic 24 by 24 grayscale
+images. Seventeen fixed descriptors summarize intensity, texture, spatial
+contrast, and edges; `image_features` in `_image_reference.py`
+defines them. This benchmark does not use a CNN or actual ultrasound scans.
+The same vector $V_i$ enters both RITS directions, current-cell predictions,
+and the fusion head.
+
+Clinical fusion features include eight summaries per biomarker: mean, SD,
+late mean, late-minus-early mean, mean absolute increment, mean absolute
+second difference, total change, and terminal slope. They and observed
+clinical covariates are concatenated with $V_i$. A 48-unit ReLU layer and
+three-class softmax output form the fusion model. The same architecture
+is refitted for each imputation from each method; 20% of labeled training
+subjects select its checkpoint.
+
+Seventy-five percent of subjects supply training labels; 25% are held out.
+Default missForest has no inductive transform. This benchmark therefore
+allows every imputer to use observed unlabeled test covariates:
+it is **transductive, held-out-label prediction**, not external validation.
+True test labels never enter imputers, scalers, or checkpoint selection.
+They are missing in the MICE/missForest input frame and excluded from
+BRITS-MI supervision. All three methods receive the same image descriptors.
+
+Average the $M$ probability vectors first, then calculate macro
+one-versus-rest AUROC, macro average precision (reported as AUPRC), and
+log loss. Rubin's coefficient-pooling rules are not applied to AUROC/AUPRC.
+
+## Association preservation: interpretation and conditions
+
+Let $U(\beta;Y,S,C)$ be the full-data outcome-model score. Suppose the
+imputation distribution equals the identified conditional distribution
+$p(Y_{mis}\mid Y_{obs},S,C,M)$ and $E\{U(\beta_0;Y,S,C)\}=0$. Then
+
+$$E[E\{U(\beta_0;Y^{imp},S,C)\mid Y_{obs},S,C,M\}]=E\{U(\beta_0;Y,S,C)\}=0.$$
+
+The result follows from equality of the conditional distributions and
+iterated expectation. It explains why outcome conditioning matters for
+association estimation. The fitted recurrent losses are an estimation
+strategy, not proof that this equality holds. Residual noise and a finite
+bootstrap ensemble require empirical evaluation of bias, coefficient MSE,
+model and empirical SE, and interval coverage. They do not guarantee 95%
+coverage or identify an unrestricted nonignorable missingness mechanism.
+Optimization, conditional-model adequacy, and interval calibration are
+separate properties; no generic SGD theorem is claimed for finite-epoch
+AdamW with clipping and checkpoint selection.
+
+## Comparators and real-data masking
+
+MICE uses R package conditional defaults, including predictive mean matching
+for continuous biomarkers, five iterations, and 20 imputations [3].
+The observed outcome is included for association analysis. Default R
+missForest supplies one imputed dataset; its model SE is conditional on that
+imputation. Forest random seeds are not presented as proper MI.
+Mean imputation, complete-case analysis, and full data are separate baselines.
+
+For the TE application, AST/ALT/platelet masking precedes all training and
+preprocessing. Pre-mask estimates and predictor SDs are evaluation references
+only. Interval inclusion of a reference estimate is not coverage of a known
+population parameter. Classification evaluated on the fitting cohort is
+reported as apparent performance. Naturally unavailable cells remain unknown.
+The user has authorized the older source for the new run: 3,995 TE participants,
+of whom 2,209 have at least two recorded bins for each liver marker and complete
+required covariates. The reference-estimate masking analysis uses that subset.
+It is not relabeled as the manuscript's 3,977-participant cohort. Each new
+repeat masks observed cells before all model fitting and preprocessing.
+
+## Sources
+
+1. Cao W, et al. BRITS: Bidirectional Recurrent Imputation for Time Series.
+   NeurIPS 2018. [Paper](https://papers.nips.cc/paper_files/paper/2018/file/734e6bfcd358e25ac1db0a4241b95651-Paper.pdf).
+2. [Rubin pooling and Barnard-Rubin degrees of freedom](https://amices.org/mice/reference/pool.scalar.html).
+3. [MICE conditional defaults and predictor specification](https://amices.org/mice/reference/mice.html).

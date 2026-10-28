@@ -49,7 +49,8 @@ def torch_marker_gaps(mask: torch.Tensor, times: torch.Tensor) -> torch.Tensor:
     return torch.stack(rows, dim=1)
 
 
-def causal_history(values: torch.Tensor, mask: torch.Tensor, times: torch.Tensor) -> torch.Tensor:
+def causal_history(values: torch.Tensor, mask: torch.Tensor, times: torch.Tensor,
+                   valid: torch.Tensor | None = None) -> torch.Tensor:
     """Summaries available strictly before each recurrent update."""
 
     batch, length, markers = values.shape
@@ -61,12 +62,13 @@ def causal_history(values: torch.Tensor, mask: torch.Tensor, times: torch.Tensor
     first_time = torch.zeros_like(count)
     last_time = torch.zeros_like(count)
     rows: list[torch.Tensor] = []
+    visit_count = torch.zeros((batch, 1), dtype=values.dtype, device=values.device)
     for visit in range(length):
         mean = total / count.clamp_min(1.0)
         variance = total_sq / count.clamp_min(1.0) - mean.square()
         sd = torch.sqrt(torch.clamp(variance, min=0.0))
         slope = (last - first) / (last_time - first_time).clamp_min(1e-4)
-        observed_fraction = count / max(visit, 1)
+        observed_fraction = count / visit_count.clamp_min(1)
         rows.append(
             torch.cat(
                 [mean, sd, last, slope, observed_fraction, 1.0 - observed_fraction],
@@ -85,6 +87,7 @@ def causal_history(values: torch.Tensor, mask: torch.Tensor, times: torch.Tensor
         total = total + torch.where(measured, value, torch.zeros_like(value))
         total_sq = total_sq + torch.where(measured, value.square(), torch.zeros_like(value))
         count = count + measured.to(values.dtype)
+        visit_count = visit_count + (1 if valid is None else valid[:, visit, None].to(values.dtype))
     return torch.stack(rows, dim=1)
 
 
@@ -120,13 +123,20 @@ class RITSCell(nn.Module):
         static: torch.Tensor,
         context: torch.Tensor,
         reverse: bool = False,
+        lengths: torch.Tensor | None = None,
     ) -> tuple[torch.Tensor, torch.Tensor]:
+        valid = torch.ones(values.shape[:2], dtype=torch.bool, device=values.device)
+        if lengths is not None:
+            valid = torch.arange(values.shape[1], device=values.device)[None, :] < lengths[:, None]
         if reverse:
             work_values = torch.flip(values, dims=[1])
             work_mask = torch.flip(mask, dims=[1])
-            work_times = times[:, -1:] - torch.flip(times, dims=[1])
+            last = times[:, -1:] if lengths is None else times.gather(1, lengths.long()[:, None] - 1)
+            work_valid = torch.flip(valid, dims=[1])
+            work_times = torch.where(work_valid, last - torch.flip(times, dims=[1]), 0.0)
             work_gaps = torch_marker_gaps(work_mask, work_times)
         else:
+            work_valid = valid
             work_values = values
             work_mask = mask
             work_times = times
@@ -137,7 +147,7 @@ class RITSCell(nn.Module):
             dtype=values.dtype,
             device=values.device,
         )
-        history = causal_history(work_values, work_mask, work_times)
+        history = causal_history(work_values, work_mask, work_times, work_valid)
         predictions: list[torch.Tensor] = []
         completions: list[torch.Tensor] = []
         off_diagonal = 1.0 - torch.eye(
@@ -182,7 +192,8 @@ class RITSCell(nn.Module):
                 ],
                 dim=1,
             )
-            hidden = self.gru(recurrent_input, hidden)
+            updated_hidden = self.gru(recurrent_input, hidden)
+            hidden = torch.where(work_valid[:, visit, None], updated_hidden, hidden)
             predictions.append(prediction)
             completions.append(completed)
 
